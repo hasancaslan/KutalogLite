@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A053AA9D589999D875CB2089 /* Pods_KUtalog_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */; };
 		F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC623D477C5001B014B /* AppDelegate.swift */; };
-		F3AE0FC923D477C5001B014B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC823D477C5001B014B /* SceneDelegate.swift */; };
 		F3AE0FCB23D477C5001B014B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCA23D477C5001B014B /* ViewController.swift */; };
 		F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FCC23D477C5001B014B /* Main.storyboard */; };
 		F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */; };
@@ -25,7 +24,6 @@
 		AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.debug.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.debug.xcconfig"; sourceTree = "<group>"; };
 		F3AE0FC323D477C5001B014B /* KUtalog Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KUtalog Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE0FC623D477C5001B014B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3AE0FC823D477C5001B014B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F3AE0FCA23D477C5001B014B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3AE0FCD23D477C5001B014B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3AE0FD023D477C5001B014B /* KUtalog_Lite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KUtalog_Lite.xcdatamodel; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				F3AE0FDE23D47B4B001B014B /* Model */,
 				F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */,
 				F3AE0FC623D477C5001B014B /* AppDelegate.swift */,
-				F3AE0FC823D477C5001B014B /* SceneDelegate.swift */,
 				F3AE0FCA23D477C5001B014B /* ViewController.swift */,
 				F3AE0FCC23D477C5001B014B /* Main.storyboard */,
 				F3AE0FD223D477C8001B014B /* Assets.xcassets */,
@@ -254,7 +251,6 @@
 				F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */,
 				F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */,
 				F3AE0FE023D47B5E001B014B /* DataSource.swift in Sources */,
-				F3AE0FC923D477C5001B014B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
