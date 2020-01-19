@@ -1,0 +1,20 @@
+PODS:
+  - Kanna (5.0.0)
+  - TextFieldEffects (1.6.0)
+
+DEPENDENCIES:
+  - Kanna (~> 5.0.0)
+  - TextFieldEffects
+
+SPEC REPOS:
+  trunk:
+    - Kanna
+    - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+
+PODFILE CHECKSUM: 973679ff4df207ed3b1ec68e0246edd7153cb213
+
+COCOAPODS: 1.8.4
