@@ -16,5 +16,5 @@ struct Course {
     var grade = ""
     var point = 0.0
     var valid = 1
-    var indexInDersler = 0
+    var indexInCourses = 0
 }
