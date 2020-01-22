@@ -12,6 +12,7 @@
 		F311ADBA23D48086001A3DE3 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADB923D48086001A3DE3 /* ColorPalette.swift */; };
 		F311ADBC23D482E5001A3DE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */; };
 		F311ADBE23D485B3001A3DE3 /* +UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADBD23D485B3001A3DE3 /* +UIViewController.swift */; };
+		F3201AAB23D71450002565EF /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3201AAA23D71450002565EF /* CourseCell.swift */; };
 		F3463D5623D4961A000457A7 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5523D4961A000457A7 /* Alerts.swift */; };
 		F3463D5823D498DE000457A7 /* +LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5723D498DE000457A7 /* +LocalizedError.swift */; };
 		F3463D5A23D4A4EC000457A7 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5923D4A4EC000457A7 /* Course.swift */; };
@@ -19,6 +20,7 @@
 		F3463D5E23D4CAF6000457A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5D23D4CAF6000457A7 /* Utilities.swift */; };
 		F3463D6023D5BBEC000457A7 /* CourseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */; };
 		F3463D6223D5C210000457A7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6123D5C210000457A7 /* Reachability.swift */; };
+		F3463D6423D5E27E000457A7 /* TermDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */; };
 		F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC623D477C5001B014B /* AppDelegate.swift */; };
 		F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FCC23D477C5001B014B /* Main.storyboard */; };
 		F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */; };
@@ -36,6 +38,7 @@
 		F311ADB923D48086001A3DE3 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F311ADBD23D485B3001A3DE3 /* +UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIViewController.swift"; sourceTree = "<group>"; };
+		F3201AAA23D71450002565EF /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		F3463D5523D4961A000457A7 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		F3463D5723D498DE000457A7 /* +LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+LocalizedError.swift"; sourceTree = "<group>"; };
 		F3463D5923D4A4EC000457A7 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		F3463D5D23D4CAF6000457A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHistoryViewController.swift; sourceTree = "<group>"; };
 		F3463D6123D5C210000457A7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermDetailViewController.swift; sourceTree = "<group>"; };
 		F3AE0FC323D477C5001B014B /* KUtalog Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KUtalog Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE0FC623D477C5001B014B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AE0FCD23D477C5001B014B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F3463D6523D60E1D000457A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3201AAA23D71450002565EF /* CourseCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F3AE0FBA23D477C5001B014B = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 		F3AE0FC523D477C5001B014B /* KUtalog Lite */ = {
 			isa = PBXGroup;
 			children = (
+				F3463D6523D60E1D000457A7 /* Cells */,
 				F3463D5423D4960A000457A7 /* Helpers */,
 				F3AE0FE523D47C22001B014B /* Resources */,
 				F3AE0FE423D47C1C001B014B /* Extensions */,
@@ -147,6 +160,7 @@
 			children = (
 				F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */,
 				F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */,
+				F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -287,6 +301,7 @@
 				F3463D5C23D4A50E000457A7 /* Lecture.swift in Sources */,
 				F311ADBA23D48086001A3DE3 /* ColorPalette.swift in Sources */,
 				F3463D5A23D4A4EC000457A7 /* Course.swift in Sources */,
+				F3463D6423D5E27E000457A7 /* TermDetailViewController.swift in Sources */,
 				F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */,
 				F3463D6023D5BBEC000457A7 /* CourseHistoryViewController.swift in Sources */,
 				F311ADBE23D485B3001A3DE3 /* +UIViewController.swift in Sources */,
@@ -295,6 +310,7 @@
 				F3463D6223D5C210000457A7 /* Reachability.swift in Sources */,
 				F311ADB823D48067001A3DE3 /* +UIColor.swift in Sources */,
 				F3463D5823D498DE000457A7 /* +LocalizedError.swift in Sources */,
+				F3201AAB23D71450002565EF /* CourseCell.swift in Sources */,
 				F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */,
 				F3463D5623D4961A000457A7 /* Alerts.swift in Sources */,
 				F3AE0FE023D47B5E001B014B /* DataSource.swift in Sources */,

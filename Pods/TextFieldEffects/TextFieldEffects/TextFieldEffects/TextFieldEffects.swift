@@ -35,7 +35,7 @@ open class TextFieldEffects: UITextField {
     /**
     Closure executed when an animation has been completed.
      */
-    public typealias AnimationCompletionHandler = (_ type: AnimationType)->Void
+    public typealias AnimationCompletionHandler = (_ type: AnimationType) -> Void
 
     /**
     UILabel that holds all the placeholder information

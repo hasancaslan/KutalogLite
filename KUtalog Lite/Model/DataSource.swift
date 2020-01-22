@@ -10,12 +10,13 @@ import Foundation
 import Kanna
 
 protocol DataSourceDelegate {
-    func courseListLoaded(courseList: [Course])
+    func termListLoaded(termList: [[Course]])
 }
 
 class DataSource {
     var delegate: DataSourceDelegate?
     let utility = Utilities()
+    typealias loginFuncHandler = (_ completionHandler: @escaping (Error?) -> Void) -> Void
 
     fileprivate func courseHistoryDataCheck(_ data: Data, completionHandler: @escaping (Error?) -> Void) -> Bool {
         guard let html = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
@@ -97,7 +98,7 @@ class DataSource {
         return courses
     }
 
-    fileprivate func loadCourseHistory(completionHandler: @escaping (Error?) -> Void) {
+    fileprivate func fetchCourseHistory(completionHandler: @escaping (Error?) -> Void) {
         guard let courseHistoryRequest = URLRequests.PrepareCourseHistoryRequest(completionHandler: { error in
             if let error = error {
                 completionHandler(error)
@@ -128,8 +129,8 @@ class DataSource {
                         return
                     }
                     courses = self.utility.orderCourses(courses)
-                    print(courses)
-                    self.delegate?.courseListLoaded(courseList: courses)
+                    let terms = self.utility.orderTerms(courses)
+                    self.delegate?.termListLoaded(termList: terms)
                 } else {
                     completionHandler(ClassError.missingData)
                     return
@@ -140,12 +141,12 @@ class DataSource {
         courseHistoryTask.resume()
     }
 
-    func login(name: String, password: String, completionHandler: @escaping (Error?) -> Void) {
+    fileprivate func login(name: String, password: String, task: @escaping loginFuncHandler, completionHandler: @escaping (Error?) -> Void) {
         if !Reachability.isConnectedToNetwork() {
             completionHandler(ClassError.networkUnavailable)
             return
         }
-        
+
         guard let loginRequest = URLRequests.PrepareLoginRequest(name: name, password: password, completionHandler: { error in
             if let error = error {
                 completionHandler(error)
@@ -158,7 +159,7 @@ class DataSource {
 
         let loginTask = URLSession.shared.dataTask(with: loginRequest, completionHandler: { (_, _, _) -> Void in
             DispatchQueue.main.async(execute: {
-                self.loadCourseHistory(completionHandler: { error in
+                task({ error in
                     if let error = error {
                         completionHandler(error)
                         return
@@ -166,7 +167,11 @@ class DataSource {
                 })
             })
         })
-         completionHandler(nil)
+        completionHandler(nil)
         loginTask.resume()
+    }
+
+    func loadCourseHistory(name: String, password: String, completionHandler: @escaping (Error?) -> Void) {
+        login(name: name, password: password, task: fetchCourseHistory(completionHandler:), completionHandler: completionHandler)
     }
 }
