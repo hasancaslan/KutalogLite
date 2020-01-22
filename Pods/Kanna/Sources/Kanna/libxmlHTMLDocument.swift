@@ -141,12 +141,12 @@ extension String.Encoding {
 libxmlHTMLDocument
 */
 internal final class libxmlHTMLDocument: HTMLDocument {
-    fileprivate var docPtr:   htmlDocPtr? = nil
+    fileprivate var docPtr: htmlDocPtr?
     fileprivate var rootNode: XMLElement?
     fileprivate var html: String
-    fileprivate var url:  String?
+    fileprivate var url: String?
     fileprivate var encoding: String.Encoding
-    
+
     var text: String? {
         return rootNode?.text
     }
@@ -165,7 +165,7 @@ internal final class libxmlHTMLDocument: HTMLDocument {
     }
 
     var toXML: String? {
-        var buf: UnsafeMutablePointer<xmlChar>? = nil
+        var buf: UnsafeMutablePointer<xmlChar>?
         let size: UnsafeMutablePointer<Int32>? = nil
         defer {
             xmlFree(buf)
@@ -175,16 +175,16 @@ internal final class libxmlHTMLDocument: HTMLDocument {
         let html = String(cString: UnsafePointer<UInt8>(buf!))
         return html
     }
-    
+
     var innerHTML: String? {
         return rootNode?.innerHTML
     }
-    
+
     var className: String? {
         return nil
     }
-    
-    var tagName:   String? {
+
+    var tagName: String? {
         get {
             return nil
         }
@@ -203,12 +203,12 @@ internal final class libxmlHTMLDocument: HTMLDocument {
             rootNode?.content = newValue
         }
     }
-    
+
     init(html: String, url: String?, encoding: String.Encoding, option: UInt) throws {
         self.html = html
         self.url  = url
         self.encoding = encoding
-        
+
         guard html.lengthOfBytes(using: encoding) > 0 else {
             throw ParseError.Empty
         }
@@ -217,17 +217,17 @@ internal final class libxmlHTMLDocument: HTMLDocument {
             let cur = html.cString(using: encoding) else {
             throw ParseError.EncodingMismatch
         }
-        
-        let url : String = ""
+
+        let url: String = ""
         docPtr = htmlReadDoc(UnsafeRawPointer(cur).assumingMemoryBound(to: xmlChar.self), url, charsetName, CInt(option))
-        
+
         guard let docPtr = docPtr else {
             throw ParseError.EncodingMismatch
         }
-        
+
         rootNode  = libxmlHTMLNode(document: self, docPtr: docPtr)
     }
-    
+
     deinit {
         xmlFreeDoc(self.docPtr)
     }
@@ -235,35 +235,35 @@ internal final class libxmlHTMLDocument: HTMLDocument {
     var title: String? { return at_xpath("//title")?.text }
     var head: XMLElement? { return at_xpath("//head") }
     var body: XMLElement? { return at_xpath("//body") }
-    
-    func xpath(_ xpath: String, namespaces: [String:String]?) -> XPathObject {
+
+    func xpath(_ xpath: String, namespaces: [String: String]?) -> XPathObject {
         return rootNode?.xpath(xpath, namespaces: namespaces) ?? XPathObject.none
     }
-    
+
     func xpath(_ xpath: String) -> XPathObject {
         return self.xpath(xpath, namespaces: nil)
     }
-    
-    func at_xpath(_ xpath: String, namespaces: [String:String]?) -> XMLElement? {
+
+    func at_xpath(_ xpath: String, namespaces: [String: String]?) -> XMLElement? {
         return rootNode?.at_xpath(xpath, namespaces: namespaces)
     }
-    
+
     func at_xpath(_ xpath: String) -> XMLElement? {
         return self.at_xpath(xpath, namespaces: nil)
     }
-    
-    func css(_ selector: String, namespaces: [String:String]?) -> XPathObject {
+
+    func css(_ selector: String, namespaces: [String: String]?) -> XPathObject {
         return rootNode?.css(selector, namespaces: namespaces) ?? XPathObject.none
     }
-    
+
     func css(_ selector: String) -> XPathObject {
         return self.css(selector, namespaces: nil)
     }
-    
-    func at_css(_ selector: String, namespaces: [String:String]?) -> XMLElement? {
+
+    func at_css(_ selector: String, namespaces: [String: String]?) -> XMLElement? {
         return rootNode?.at_css(selector, namespaces: namespaces)
     }
-    
+
     func at_css(_ selector: String) -> XMLElement? {
         return self.at_css(selector, namespaces: nil)
     }
@@ -273,16 +273,16 @@ internal final class libxmlHTMLDocument: HTMLDocument {
 libxmlXMLDocument
 */
 internal final class libxmlXMLDocument: XMLDocument {
-    fileprivate var docPtr:   xmlDocPtr? = nil
+    fileprivate var docPtr: xmlDocPtr?
     fileprivate var rootNode: XMLElement?
     fileprivate var xml: String
     fileprivate var url: String?
     fileprivate var encoding: String.Encoding
-    
+
     var text: String? {
         return rootNode?.text
     }
-    
+
     var toHTML: String? {
         let buf = xmlBufferCreate()
         let outputBuf = xmlOutputBufferCreateBuffer(buf, nil)
@@ -297,7 +297,7 @@ internal final class libxmlXMLDocument: XMLDocument {
     }
 
     var toXML: String? {
-        var buf: UnsafeMutablePointer<xmlChar>? = nil
+        var buf: UnsafeMutablePointer<xmlChar>?
         let size: UnsafeMutablePointer<Int32>? = nil
         defer {
             xmlFree(buf)
@@ -307,22 +307,22 @@ internal final class libxmlXMLDocument: XMLDocument {
         let html = String(cString: UnsafePointer<UInt8>(buf!))
         return html
     }
-    
+
     var innerHTML: String? {
         return rootNode?.innerHTML
     }
-    
+
     var className: String? {
         return nil
     }
-    
-    var tagName:   String? {
+
+    var tagName: String? {
         get {
             return nil
         }
 
         set {
-            
+
         }
     }
 
@@ -335,22 +335,21 @@ internal final class libxmlXMLDocument: XMLDocument {
             rootNode?.content = newValue
         }
     }
-    
+
     init(xml: String, url: String?, encoding: String.Encoding, option: UInt) throws {
         self.xml  = xml
         self.url  = url
         self.encoding = encoding
-        
+
         if xml.isEmpty {
             throw ParseError.Empty
         }
-
 
         guard let charsetName = encoding.IANACharSetName,
             let cur = xml.cString(using: encoding) else {
                 throw ParseError.EncodingMismatch
         }
-        let url : String = ""
+        let url: String = ""
         docPtr = xmlReadDoc(UnsafeRawPointer(cur).assumingMemoryBound(to: xmlChar.self), url, charsetName, CInt(option))
         rootNode  = libxmlHTMLNode(document: self, docPtr: docPtr!)
     }
@@ -358,35 +357,35 @@ internal final class libxmlXMLDocument: XMLDocument {
     deinit {
         xmlFreeDoc(self.docPtr)
     }
-    
-    func xpath(_ xpath: String, namespaces: [String:String]?) -> XPathObject {
+
+    func xpath(_ xpath: String, namespaces: [String: String]?) -> XPathObject {
         return rootNode?.xpath(xpath, namespaces: namespaces) ?? XPathObject.none
     }
-    
+
     func xpath(_ xpath: String) -> XPathObject {
         return self.xpath(xpath, namespaces: nil)
     }
-    
-    func at_xpath(_ xpath: String, namespaces: [String:String]?) -> XMLElement? {
+
+    func at_xpath(_ xpath: String, namespaces: [String: String]?) -> XMLElement? {
         return rootNode?.at_xpath(xpath, namespaces: namespaces)
     }
-    
+
     func at_xpath(_ xpath: String) -> XMLElement? {
         return self.at_xpath(xpath, namespaces: nil)
     }
-    
-    func css(_ selector: String, namespaces: [String:String]?) -> XPathObject {
+
+    func css(_ selector: String, namespaces: [String: String]?) -> XPathObject {
         return rootNode?.css(selector, namespaces: namespaces) ?? XPathObject.none
     }
-    
+
     func css(_ selector: String) -> XPathObject {
         return self.css(selector, namespaces: nil)
     }
-    
-    func at_css(_ selector: String, namespaces: [String:String]?) -> XMLElement? {
+
+    func at_css(_ selector: String, namespaces: [String: String]?) -> XMLElement? {
         return rootNode?.at_css(selector, namespaces: namespaces)
     }
-    
+
     func at_css(_ selector: String) -> XMLElement? {
         return self.at_css(selector, namespaces: nil)
     }
