@@ -179,16 +179,16 @@ private func getElement(_ str: inout String, skip: Bool = true) -> String {
     if let result = matchElement(str) {
         let (text, text2) = (escapeCSS(substringWithRangeAtIndex(result, str: str, at: 1)),
                              escapeCSS(substringWithRangeAtIndex(result, str: str, at: 5)))
-
+        
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         // tag with namespace
         if !text.isEmpty && !text2.isEmpty {
             return "\(text):\(text2)"
         }
-
+        
         // tag
         if !text.isEmpty {
             return text
@@ -204,7 +204,7 @@ private func getClassId(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         if attr.hasPrefix("#") {
             return "@id = '\(text)'"
         } else if attr.hasPrefix(".") {
@@ -223,7 +223,7 @@ private func getAttribute(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         switch expr {
         case "!=":
             return "@\(attr) != \(text)"
@@ -245,7 +245,7 @@ private func getAttribute(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         return "@\(atr)"
     } else if str.hasPrefix("[") {
         // bad syntax attribute
@@ -257,7 +257,7 @@ private func getAttribute(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         switch one {
         case "first-child":
             return "count(preceding-sibling::*) = 0"
@@ -279,7 +279,7 @@ private func getAttribute(_ str: inout String, skip: Bool = true) -> String? {
             if let sub = matchSubNthChild(one) {
                 let (nth, arg1) = (substringWithRangeAtIndex(sub, str: one, at: 1),
                                    substringWithRangeAtIndex(sub, str: one, at: 2))
-
+                
                 let nthFunc = (nth == "nth-child") ? nth_child : nth_last_child
                 if arg1 == "odd" {
                     return nthFunc(2, 1)
@@ -292,7 +292,7 @@ private func getAttribute(_ str: inout String, skip: Bool = true) -> String? {
                 let (nth, arg1, arg2) = (substringWithRangeAtIndex(sub, str: one, at: 1),
                                          substringWithRangeAtIndex(sub, str: one, at: 2),
                                          substringWithRangeAtIndex(sub, str: one, at: 3))
-
+                
                 let nthFunc = (nth == "nth-child") ? nth_child : nth_last_child
                 let a: Int = (arg1 == "-") ? -1 : Int(arg1)!
                 let b: Int = (arg2.isEmpty) ? 0 : Int(arg2)!
@@ -323,7 +323,7 @@ private func getAttrNot(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         if let attr = getAttribute(&one, skip: false) {
             return attr
         } else if let sub = matchElement(one) {
@@ -350,7 +350,7 @@ private func genCombinator(_ str: inout String, skip: Bool = true) -> String? {
         if skip {
             str = String(str[str.index(str.startIndex, offsetBy: result.range.length)..<str.endIndex])
         }
-
+        
         switch one {
         case ">":
             return "/"

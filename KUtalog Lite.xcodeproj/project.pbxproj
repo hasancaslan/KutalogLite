@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A053AA9D589999D875CB2089 /* Pods_KUtalog_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */; };
+		92F9D05EA0E275478EB6A4EB /* Pods_KUtalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */; };
 		F311ADB823D48067001A3DE3 /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADB723D48067001A3DE3 /* +UIColor.swift */; };
 		F311ADBA23D48086001A3DE3 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADB923D48086001A3DE3 /* ColorPalette.swift */; };
 		F311ADBC23D482E5001A3DE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */; };
@@ -28,12 +28,14 @@
 		F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */; };
 		F3AE0FE023D47B5E001B014B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* DataSource.swift */; };
 		F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FE123D47B7F001B014B /* URLRequests.swift */; };
+		F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.release.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.release.xcconfig"; sourceTree = "<group>"; };
-		6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog.release.xcconfig"; path = "Target Support Files/Pods-KUtalog/Pods-KUtalog.release.xcconfig"; sourceTree = "<group>"; };
 		AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.debug.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog.debug.xcconfig"; path = "Target Support Files/Pods-KUtalog/Pods-KUtalog.debug.xcconfig"; sourceTree = "<group>"; };
 		F311ADB723D48067001A3DE3 /* +UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIColor.swift"; sourceTree = "<group>"; };
 		F311ADB923D48086001A3DE3 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KUtalog Lite.entitlements"; sourceTree = "<group>"; };
 		F3AE0FDF23D47B5E001B014B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		F3AE0FE123D47B7F001B014B /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
+		F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A053AA9D589999D875CB2089 /* Pods_KUtalog_Lite.framework in Frameworks */,
+				92F9D05EA0E275478EB6A4EB /* Pods_KUtalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +80,8 @@
 			children = (
 				AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */,
 				26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */,
+				CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */,
+				A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -83,7 +89,7 @@
 		DB1DA87D688CCC926C7CDA28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */,
+				FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				F3AE0FD223D477C8001B014B /* Assets.xcassets */,
 				F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */,
 				F3AE0FD723D477C8001B014B /* Info.plist */,
+				F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */,
 				F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */,
 			);
 			path = "KUtalog Lite";
@@ -244,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */,
+				F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */,
 				F3AE0FD323D477C8001B014B /* Assets.xcassets in Resources */,
 				F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */,
 			);
@@ -258,15 +266,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B378495AE643531120E231D5 /* [CP] Check Pods Manifest.lock */ = {
@@ -284,7 +292,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KUtalog Lite-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KUtalog-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -456,7 +464,7 @@
 		};
 		F3AE0FDB23D477C8001B014B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */;
+			baseConfigurationReference = CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";
@@ -477,7 +485,7 @@
 		};
 		F3AE0FDC23D477C8001B014B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */;
+			baseConfigurationReference = A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";

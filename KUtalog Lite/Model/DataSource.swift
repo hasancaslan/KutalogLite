@@ -16,7 +16,6 @@ protocol DataSourceDelegate {
 class DataSource {
     var delegate: DataSourceDelegate?
     let utility = Utilities()
-    let reachability = Reachability()
     typealias loginFuncHandler = (_ completionHandler: @escaping (Error?) -> Void) -> Void
 
     fileprivate func courseHistoryDataCheck(_ data: Data, completionHandler: @escaping (Error?) -> Void) -> Bool {
@@ -143,7 +142,7 @@ class DataSource {
     }
 
     fileprivate func login(name: String, password: String, task: @escaping loginFuncHandler, completionHandler: @escaping (Error?) -> Void) {
-        if !reachability.isConnectedToNetwork() {
+        if !Reachability.shared.isConnectedToNetwork() {
             completionHandler(ClassError.networkUnavailable)
             return
         }
