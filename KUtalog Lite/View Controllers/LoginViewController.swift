@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func loginTapped(_ sender: Any) {
+        self.view.endEditing(true)
         let activityIndicator: UIActivityIndicatorView = {
             let activity = UIActivityIndicatorView()
             activity.translatesAutoresizingMaskIntoConstraints = false
