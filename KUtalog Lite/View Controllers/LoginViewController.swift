@@ -10,7 +10,7 @@ import UIKit
 import TextFieldEffects
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var emailField: MadokaTextField!
+    @IBOutlet weak var usernameField: MadokaTextField!
     @IBOutlet weak var passwordField: MadokaTextField!
     @IBOutlet weak var loginButton: UIButton!
     var dataSource = DataSource()
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         activityIndicator.centerXAnchor.constraint(equalTo: loginButton.centerXAnchor).isActive = true
         activityIndicator.centerYAnchor.constraint(equalTo: loginButton.centerYAnchor).isActive = true
 
-        guard let username = emailField.text, let password = passwordField.text else {
+        guard let username = usernameField.text, let password = passwordField.text else {
             let alert = createErrorAlert(message: .fieldsEmpty, error: nil)
             self.present(alert, animated: true, completion: nil)
             return

@@ -11,19 +11,19 @@
         <!--Login View Controller-->
         <scene sceneID="TbE-eF-1mf">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Bum-CS-2vB" customClass="LoginViewController" customModule="KUtalog_Lite" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Bum-CS-2vB" customClass="LoginViewController" customModule="KUtalog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qo2-qm-fGX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="LcC-YL-JLb" customClass="MadokaTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="40" y="317" width="334" height="54"/>
+                                <rect key="frame" x="40" y="321" width="334" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="XdS-yS-lGE"/>
                                 </constraints>
                                 <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                         <real key="value" value="1"/>
@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0E-vm-Rc0">
-                                <rect key="frame" x="60" y="431" width="294" height="54"/>
+                                <rect key="frame" x="60" y="435" width="294" height="54"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="4Dt-ej-pcg"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="0Vb-hH-1oM" customClass="MadokaTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="40" y="223" width="334" height="54"/>
+                                <rect key="frame" x="40" y="227" width="334" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="jBv-nJ-puz"/>
                                 </constraints>
@@ -70,47 +70,46 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qyb-gD-SND">
-                                <rect key="frame" x="110" y="104" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="fYn-M0-egb"/>
-                                    <constraint firstAttribute="height" constant="75" id="umJ-ee-M3c"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kutalog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-9L-jOw">
-                                <rect key="frame" x="193" y="121" width="111" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="a54-zc-njq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
-                                <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuK-9Q-BLr">
+                                <rect key="frame" x="111.5" y="98" width="191.5" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qyb-gD-SND">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="fYn-M0-egb"/>
+                                            <constraint firstAttribute="height" constant="75" id="umJ-ee-M3c"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Kutalog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-9L-jOw">
+                                        <rect key="frame" x="75" y="0.0" width="116.5" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="34"/>
+                                        <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.086274509803921567" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="GuK-9Q-BLr" firstAttribute="top" secondItem="OSo-eM-Cku" secondAttribute="top" constant="54" id="1gm-eU-vNS"/>
+                            <constraint firstItem="0Vb-hH-1oM" firstAttribute="top" secondItem="GuK-9Q-BLr" secondAttribute="bottom" constant="54" id="38s-CC-KwK"/>
                             <constraint firstItem="OSo-eM-Cku" firstAttribute="trailing" secondItem="LcC-YL-JLb" secondAttribute="trailing" constant="40" id="9Jk-TW-eVc"/>
-                            <constraint firstItem="Qyb-gD-SND" firstAttribute="top" secondItem="OSo-eM-Cku" secondAttribute="top" constant="60" id="Ac8-QH-rUu"/>
                             <constraint firstItem="LcC-YL-JLb" firstAttribute="leading" secondItem="OSo-eM-Cku" secondAttribute="leading" constant="40" id="Bzx-VO-Xmb"/>
                             <constraint firstItem="OSo-eM-Cku" firstAttribute="trailing" secondItem="0Vb-hH-1oM" secondAttribute="trailing" constant="40" id="IO7-8x-tG3"/>
-                            <constraint firstItem="OSo-eM-Cku" firstAttribute="trailing" secondItem="Pcr-9L-jOw" secondAttribute="trailing" constant="110" id="QD7-If-h6u"/>
-                            <constraint firstItem="Pcr-9L-jOw" firstAttribute="leading" secondItem="Qyb-gD-SND" secondAttribute="trailing" constant="8" id="VBG-iR-84Q"/>
                             <constraint firstItem="LcC-YL-JLb" firstAttribute="top" secondItem="0Vb-hH-1oM" secondAttribute="bottom" constant="40" id="VGc-gU-3Pk"/>
+                            <constraint firstItem="GuK-9Q-BLr" firstAttribute="centerX" secondItem="OSo-eM-Cku" secondAttribute="centerX" id="YPf-qB-AL1"/>
                             <constraint firstItem="OSo-eM-Cku" firstAttribute="trailing" secondItem="G0E-vm-Rc0" secondAttribute="trailing" constant="60" id="fq9-pk-cnP"/>
                             <constraint firstItem="G0E-vm-Rc0" firstAttribute="leading" secondItem="OSo-eM-Cku" secondAttribute="leading" constant="60" id="noC-RY-Ccq"/>
-                            <constraint firstItem="0Vb-hH-1oM" firstAttribute="top" secondItem="Qyb-gD-SND" secondAttribute="bottom" constant="44" id="ona-lR-YaJ"/>
                             <constraint firstItem="0Vb-hH-1oM" firstAttribute="leading" secondItem="OSo-eM-Cku" secondAttribute="leading" constant="40" id="oru-ch-l7D"/>
                             <constraint firstItem="G0E-vm-Rc0" firstAttribute="top" secondItem="LcC-YL-JLb" secondAttribute="bottom" constant="60" id="r7J-KO-ncW"/>
-                            <constraint firstItem="Pcr-9L-jOw" firstAttribute="centerY" secondItem="Qyb-gD-SND" secondAttribute="centerY" id="s8B-v4-AJn"/>
-                            <constraint firstItem="Qyb-gD-SND" firstAttribute="leading" secondItem="OSo-eM-Cku" secondAttribute="leading" constant="110" id="yP0-SQ-dtn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OSo-eM-Cku"/>
                     </view>
                     <navigationItem key="navigationItem" id="ic4-pC-UlF"/>
                     <connections>
-                        <outlet property="emailField" destination="0Vb-hH-1oM" id="7Bn-cM-RiY"/>
                         <outlet property="loginButton" destination="G0E-vm-Rc0" id="JPQ-as-TRr"/>
                         <outlet property="passwordField" destination="LcC-YL-JLb" id="S6e-uk-yv1"/>
+                        <outlet property="usernameField" destination="0Vb-hH-1oM" id="J9L-ao-wRK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyD-Ho-REf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,7 +135,7 @@
         <!--Course History-->
         <scene sceneID="1Mo-dH-ApB">
             <objects>
-                <viewController storyboardIdentifier="CourseHistoryViewController" id="BXq-hL-4tK" customClass="CourseHistoryViewController" customModule="KUtalog_Lite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CourseHistoryViewController" id="BXq-hL-4tK" customClass="CourseHistoryViewController" customModule="KUtalog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0X-t6-iJ2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,7 +225,7 @@
         <!--Term Detail View Controller-->
         <scene sceneID="LCp-MT-VGT">
             <objects>
-                <viewController storyboardIdentifier="TermDetailViewController" id="Tk3-c0-NXs" customClass="TermDetailViewController" customModule="KUtalog_Lite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TermDetailViewController" id="Tk3-c0-NXs" customClass="TermDetailViewController" customModule="KUtalog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLc-li-QWn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +259,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="CourseCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CourseCell" id="4WR-w9-rYe" customClass="CourseCell" customModule="KUtalog_Lite" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="CourseCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CourseCell" id="4WR-w9-rYe" customClass="CourseCell" customModule="KUtalog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="4WR-w9-rYe" id="u8l-ir-fZ1">
@@ -371,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="2911.594202898551" y="-178.125"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--MainTabBarController-->
         <scene sceneID="b9g-vQ-iwU">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="qTC-BV-smv" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" title="MainTabBarController" id="qTC-BV-smv" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8H8-rl-3aR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
