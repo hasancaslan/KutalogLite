@@ -12,20 +12,18 @@ class CourseHistoryViewController: UIViewController {
     var terms: [[Course]]?
     var dataSource = DataSource()
     let utility = Utilities()
+    var credit = 0.0
     @IBOutlet weak var courseHistoryTableView: UITableView!
     var refreshControl: UIRefreshControl!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var gpaLabel: UILabel!
-    @IBOutlet weak var creditsLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         courseHistoryTableView.delegate = self
         courseHistoryTableView.dataSource = self
         dataSource.delegate = self
-        setNavigationBar()
         addRefreshControl()
-
         if terms == nil {
             if let fetchedTerms = fetchStorage() {
                 reloadTerms(with: fetchedTerms)
@@ -52,30 +50,21 @@ class CourseHistoryViewController: UIViewController {
     fileprivate func addRefreshControl() {
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.tintColor = ColorPalette.babyPowder
         refreshControl.addTarget(self, action: #selector(CourseHistoryViewController.refresh(_:)), for: UIControl.Event.valueChanged)
         courseHistoryTableView.refreshControl = refreshControl
     }
 
     fileprivate func reloadTerms(with termList: [[Course]]) {
-        let sortedTerms = utility.sortTerms(termList)
-        terms = sortedTerms
-        updateStorage(with: sortedTerms)
-
-        let gpa = utility.calculateGPA(sortedTerms)
+        terms = termList
+        updateStorage(with: termList)
+        let gpa = utility.calculateGPA(termList)
         if gpa >= 0.0 {
             gpaLabel.text = String(format: "GPA: %.2f", gpa)
         } else {
             gpaLabel.text = "GPA: -"
         }
 
-        let credits = utility.calculateTotalCredits(sortedTerms)
-        if credits >= 0.0 {
-            creditsLabel.text = String(format: "Credits: %.0f", credits)
-        } else {
-            creditsLabel.text = "Credits: -"
-        }
-
+        //            credit = utility.calculateCredits()
         courseHistoryTableView.reloadData()
     }
 
@@ -103,34 +92,14 @@ class CourseHistoryViewController: UIViewController {
         self.courseHistoryTableView.contentInset = inset
     }
 
-    func setNavigationBar() {
-        if #available(iOS 13.0, *) {
-            let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithDefaultBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: ColorPalette.babyPowder]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: ColorPalette.babyPowder]
-            navBarAppearance.backgroundColor = ColorPalette.maastrichtBlue
-            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
-            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-            self.navigationController?.navigationBar.compactAppearance = navBarAppearance
-        }
-    }
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? TermDetailViewController {
-            guard let cell = sender as? UITableViewCell else { return }
-            if let indexPath = courseHistoryTableView.indexPath(for: cell) {
-                let index = indexPath.row
-                destination.courses = terms?[index]
-                destination.indexInTerms = index
-                destination.delegate = self
-            }
-        }
-    }
+// MARK: - Navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      Get the new view controller using segue.destination.
+      Pass the selected object to the new view controller.
+     }
 }
 
-// MARK: - UITableViewDelegate and DataSource
+// MARK: - UITableView Delegate and Data Source
 extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return terms?.count ?? 0
@@ -138,6 +107,20 @@ extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CourseHistoryCell", for: indexPath) as UITableViewCell
+
+        //        //      if indexPath.row == 0 {
+        //        if gpa >= 0.0 {
+        //            cell.textLabel?.text = String(format: "GPA: %.2f", gpa)
+        //        } else {
+        //            cell.textLabel?.text = "-"
+        //        }
+        //        cell.backgroundColor = UIColor.lightGray
+        //        cell.tintColor = UIColor.white
+        //        cell.textLabel?.font = UIFont.systemFont(ofSize: 19)
+        //        cell.detailTextLabel?.text = String(format: "Credit: %.0f", credit)
+        //        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        //        cell.isUserInteractionEnabled = false
+        //    } else {
         guard let termList = terms else {
             cell.textLabel?.text = ""
             cell.detailTextLabel?.text = ""
@@ -146,13 +129,12 @@ extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSourc
         }
 
         let spa = utility.calculateSPA(termList[indexPath.row])
+        cell.textLabel?.text = termList[indexPath.row][0].term
         if spa >= 0.0 {
             cell.detailTextLabel?.text = String(format: "%.2f", spa)
         } else {
             cell.detailTextLabel?.text = "-"
         }
-
-        cell.textLabel?.text = termList[indexPath.row][0].term
         return cell
     }
 
@@ -161,7 +143,6 @@ extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSourc
     }
 }
 
-// MARK: - DataSourceDelegate
 extension CourseHistoryViewController: DataSourceDelegate {
     func termListLoaded(termList: [[Course]]) {
         self.reloadTerms(with: termList)
@@ -170,12 +151,12 @@ extension CourseHistoryViewController: DataSourceDelegate {
     }
 }
 
-// MARK: - TermDetail Change Delegate
-extension CourseHistoryViewController: TermDetailDelegate {
-    func coursesDidChange(index: Int, newCourses: [Course]) {
+extension CourseHistoryViewController: TermDetailChangeDelegate {
+    func courseDidChange(index: Int, newCourses: [Course]) {
         if var newTerms = terms {
             newTerms[index] = newCourses
             reloadTerms(with: newTerms)
+            updateStorage(with: newTerms)
         }
     }
 }

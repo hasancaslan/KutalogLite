@@ -18,7 +18,7 @@ class Utilities {
     }
 
     func orderTerms(_ rawCourses: [Course]) -> [[Course]] {
-        var terms = coursesToTerms(rawCourses)
+        var terms = getTerms(rawCourses)
         terms = sortTerms(terms)
         return terms
     }
@@ -102,7 +102,7 @@ class Utilities {
         return checkedCourses
     }
 
-    fileprivate func coursesToTerms(_ courses: [Course]) -> [[Course]] {
+    fileprivate func getTerms(_ courses: [Course]) -> [[Course]] {
         var newTerm = [Course]()
         var tempCourses = courses
         var terms = [[Course]]()
@@ -129,7 +129,7 @@ class Utilities {
         return terms
     }
 
-    func sortTerms(_ termm: [[Course]]) -> [[Course]] {
+    fileprivate func sortTerms(_ termm: [[Course]]) -> [[Course]] {
         var sortedTerms = termm
         for i  in 0..<sortedTerms.count - 1 {
 
