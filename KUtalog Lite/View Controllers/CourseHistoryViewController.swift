@@ -25,6 +25,9 @@ class CourseHistoryViewController: UIViewController {
         dataSource.delegate = self
         setNavigationBar()
         addRefreshControl()
+        gpaLabel.layer.cornerRadius = 5
+        creditsLabel.layer.cornerRadius = 5
+        courseHistoryTableView.rowHeight = 54
 
         if terms == nil {
             if let fetchedTerms = fetchStorage() {
@@ -57,25 +60,27 @@ class CourseHistoryViewController: UIViewController {
         courseHistoryTableView.refreshControl = refreshControl
     }
 
+    func setGpaAndCredits(_ sortedTerms: [[Course]]) {
+        let gpa = utility.calculateGPA(sortedTerms)
+        if gpa >= 0.0 {
+            gpaLabel.text = String(format: "  GPA: %.2f  ", gpa)
+        } else {
+            gpaLabel.text = "  GPA: -  "
+        }
+        
+        let credits = utility.calculateTotalCredits(sortedTerms)
+        if credits >= 0.0 {
+            creditsLabel.text = String(format: "  Credits: %.0f  ", credits)
+        } else {
+            creditsLabel.text = "  Credits: -  "
+        }
+    }
+    
     fileprivate func reloadTerms(with termList: [[Course]]) {
         let sortedTerms = utility.sortTerms(termList)
         terms = sortedTerms
         updateStorage(with: sortedTerms)
-
-        let gpa = utility.calculateGPA(sortedTerms)
-        if gpa >= 0.0 {
-            gpaLabel.text = String(format: "GPA: %.2f", gpa)
-        } else {
-            gpaLabel.text = "GPA: -"
-        }
-
-        let credits = utility.calculateTotalCredits(sortedTerms)
-        if credits >= 0.0 {
-            creditsLabel.text = String(format: "Credits: %.0f", credits)
-        } else {
-            creditsLabel.text = "Credits: -"
-        }
-
+        setGpaAndCredits(sortedTerms)
         courseHistoryTableView.reloadData()
     }
 
@@ -113,6 +118,9 @@ class CourseHistoryViewController: UIViewController {
             self.navigationController?.navigationBar.standardAppearance = navBarAppearance
             self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
             self.navigationController?.navigationBar.compactAppearance = navBarAppearance
+        } else {
+            self.navigationController?.navigationBar.backgroundColor = ColorPalette.maastrichtBlue
+            self.navigationController?.navigationBar.isTranslucent = false
         }
     }
 

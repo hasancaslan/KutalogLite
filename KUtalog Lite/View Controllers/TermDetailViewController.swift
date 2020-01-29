@@ -26,6 +26,9 @@ class TermDetailViewController: UIViewController {
         termDetailTableView.dataSource = self
         setSpaAndCreditLabels()
         setNavigationTitle()
+        spaLabel.layer.cornerRadius = 5
+        creditsLabel.layer.cornerRadius = 5
+        termDetailTableView.rowHeight = 54
         // Do any additional setup after loading the view.
     }
 
@@ -38,11 +41,15 @@ class TermDetailViewController: UIViewController {
         let credits = utility.calculateSemesterCredits(courses)
 
         if spa >= 0 {
-            spaLabel.text = String(format: "SPA: %.2f", spa)
+            spaLabel.text = String(format: "  SPA: %.2f  ", spa)
+        } else {
+            spaLabel.text = String(format: "  SPA: -  ")
         }
 
         if credits >= 0 {
-            creditsLabel.text = String(format: "Credits: %.0f", credits)
+            creditsLabel.text = String(format: "  Credits: %.0f  ", credits)
+        } else {
+             creditsLabel.text = String(format: "  Credits: -  ")
         }
     }
 
