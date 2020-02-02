@@ -84,7 +84,7 @@ extension TermDetailViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell") as? CourseCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.courseCell) as? CourseCell else { return UITableViewCell() }
         let index = indexPath.row
         cell.title.text = courses[index].name
         cell.detail.text = String(format: "%.0f", courses[index].units)

@@ -14,6 +14,7 @@ protocol CourseCellDelegate {
 }
 
 class CourseCell: UITableViewCell {
+    @IBOutlet weak var gradeView: UIView!
     @IBOutlet var title: UILabel!
     @IBOutlet var plus: UIButton!
     @IBOutlet var textField: UILabel!
@@ -24,7 +25,7 @@ class CourseCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        gradeView.layer.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

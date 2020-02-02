@@ -15,11 +15,11 @@ enum AlertMessages: String {
 
 func createErrorAlert(message: AlertMessages, error: Error?) -> UIAlertController {
     if let error = error {
-        let alert = UIAlertController(title: "Aw, Snap!", message: error.localizedDescription, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Aw, Snap!", message: error.localizedDescription, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         return alert
     } else {
-        let alert = UIAlertController(title: "Aw, Snap!", message: message.rawValue, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Aw, Snap!", message: message.rawValue, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         return alert
     }

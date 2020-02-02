@@ -10,7 +10,7 @@ import UIKit
 
 class CourseHistoryViewController: UIViewController {
     var terms: [[Course]]?
-    var dataSource = DataSource()
+    var dataSource = CourseDataSource()
     let utility = Utilities()
     @IBOutlet weak var courseHistoryTableView: UITableView!
     var refreshControl: UIRefreshControl!
@@ -41,11 +41,11 @@ class CourseHistoryViewController: UIViewController {
     // MARK: - Helpers
     fileprivate func updateStorage(with terms: [[Course]]) {
         let storage = utility.toJson(from: terms) as NSString
-        UserDefaults.standard.set(storage, forKey: "storage")
+        UserDefaults.standard.set(storage, forKey: UserDefaultsKeys.storageKey)
     }
 
     fileprivate func fetchStorage() -> [[Course]]? {
-        if let storage = UserDefaults.standard.object(forKey: "storage") as? NSString {
+        if let storage = UserDefaults.standard.object(forKey: UserDefaultsKeys.storageKey) as? NSString {
             return utility.readJson(from: storage)
         } else {
             return nil
@@ -54,8 +54,7 @@ class CourseHistoryViewController: UIViewController {
 
     fileprivate func addRefreshControl() {
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.tintColor = ColorPalette.babyPowder
+        refreshControl.tintColor = UIColor.babyPowder
         refreshControl.addTarget(self, action: #selector(CourseHistoryViewController.refresh(_:)), for: UIControl.Event.valueChanged)
         courseHistoryTableView.refreshControl = refreshControl
     }
@@ -85,8 +84,8 @@ class CourseHistoryViewController: UIViewController {
     }
 
     @objc func refresh(_ sender: AnyObject) {
-        guard let username = UserDefaults.standard.string(forKey: "username"),
-            let password = UserDefaults.standard.string(forKey: "password") else {
+        guard let username = UserDefaults.standard.string(forKey: UserDefaultsKeys.usernameKey),
+            let password = UserDefaults.standard.string(forKey: UserDefaultsKeys.passwordKey) else {
                 let alert = createErrorAlert(message: .fieldsEmpty, error: nil)
                 self.present(alert, animated: true, completion: nil)
                 return
@@ -111,15 +110,15 @@ class CourseHistoryViewController: UIViewController {
     func setNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithDefaultBackground()
-            navBarAppearance.titleTextAttributes = [.foregroundColor: ColorPalette.babyPowder]
-            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: ColorPalette.babyPowder]
-            navBarAppearance.backgroundColor = ColorPalette.maastrichtBlue
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.backgroundColor = UIColor.maastrichtBlue
             self.navigationController?.navigationBar.standardAppearance = navBarAppearance
             self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
             self.navigationController?.navigationBar.compactAppearance = navBarAppearance
         } else {
-            self.navigationController?.navigationBar.backgroundColor = ColorPalette.maastrichtBlue
+            self.navigationController?.navigationBar.backgroundColor = UIColor.maastrichtBlue
             self.navigationController?.navigationBar.isTranslucent = false
         }
     }
@@ -145,7 +144,7 @@ extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CourseHistoryCell", for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.courseHistoryCell, for: indexPath) as UITableViewCell
         guard let termList = terms else {
             cell.textLabel?.text = ""
             cell.detailTextLabel?.text = ""
@@ -170,7 +169,7 @@ extension CourseHistoryViewController: UITableViewDelegate, UITableViewDataSourc
 }
 
 // MARK: - DataSourceDelegate
-extension CourseHistoryViewController: DataSourceDelegate {
+extension CourseHistoryViewController: CourseDataSourceDelegate {
     func termListLoaded(termList: [[Course]]) {
         self.reloadTerms(with: termList)
         self.refreshControl.endRefreshing()
