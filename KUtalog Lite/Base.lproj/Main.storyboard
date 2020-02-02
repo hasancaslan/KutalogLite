@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-ku-login-white" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-QV-l5L">
-                                <rect key="frame" x="-77.666666666666686" y="622" width="530.33333333333337" height="190"/>
+                                <rect key="frame" x="55" y="717" width="265" height="95"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Maastricht Blue"/>
@@ -135,7 +135,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="WVg-Qq-Wsd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timetable" image="calendar" catalog="system" id="Myr-G0-En2"/>
+                    <tabBarItem key="tabBarItem" title="Timetable" image="calendar" selectedImage="calendar" id="Myr-G0-En2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyR-Ug-waF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -484,7 +484,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="oLn-Oi-hGm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Class Search" image="magnifyingglass" catalog="system" id="4Vp-Qa-Jbd"/>
+                    <tabBarItem key="tabBarItem" title="Class Search" image="magnifyingglass" selectedImage="magnifyingglass" id="4Vp-Qa-Jbd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-aK-a6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -792,7 +792,7 @@
         <scene sceneID="FN6-7I-0GI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6p4-V3-Gyu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Course History" image="archivebox" catalog="system" selectedImage="archivebox" id="x5Z-hv-irJ"/>
+                    <tabBarItem key="tabBarItem" title="Course History" image="archivebox" selectedImage="archivebox" id="x5Z-hv-irJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Er9-dV-y9v">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -822,7 +822,7 @@
         <scene sceneID="bJn-iz-p2g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qRr-d6-gbW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" image="square.and.pencil" catalog="system" id="rkh-fu-3pi"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="square.and.pencil" selectedImage="square.and.pencil" id="rkh-fu-3pi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="0f8-lt-RhT">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -848,15 +848,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="archivebox" catalog="system" width="64" height="52"/>
-        <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="archivebox" width="17" height="16"/>
+        <image name="calendar" width="17" height="16"/>
         <image name="logo" width="94" height="84"/>
         <image name="logo-ku-login-white" width="265" height="95"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass" width="16" height="16"/>
         <image name="minus.icon" width="137" height="138"/>
         <image name="pencil" catalog="system" width="64" height="56"/>
         <image name="plus.icon" width="137" height="138"/>
-        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
+        <image name="square.and.pencil" width="17" height="17"/>
         <image name="trash.fill" catalog="system" width="60" height="64"/>
         <namedColor name="Baby Powder">
             <color red="0.99215686274509807" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

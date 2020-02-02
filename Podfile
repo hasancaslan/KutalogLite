@@ -9,7 +9,6 @@ target 'KUtalog' do
   pod 'Firebase/Analytics'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'Firebase/Messaging'
   pod 'TextFieldEffects', '~> 1.6.0'
   pod 'Kanna', '~> 5.0.0'
 
