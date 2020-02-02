@@ -66,7 +66,7 @@ class CourseHistoryViewController: UIViewController {
         } else {
             gpaLabel.text = "  GPA: -  "
         }
-        
+
         let credits = utility.calculateTotalCredits(sortedTerms)
         if credits >= 0.0 {
             creditsLabel.text = String(format: "  Credits: %.0f  ", credits)
@@ -74,7 +74,7 @@ class CourseHistoryViewController: UIViewController {
             creditsLabel.text = "  Credits: -  "
         }
     }
-    
+
     fileprivate func reloadTerms(with termList: [[Course]]) {
         let sortedTerms = utility.sortTerms(termList)
         terms = sortedTerms

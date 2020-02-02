@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CourseCellDelegate {
+protocol CourseCellDelegate: AnyObject {
     func didPlusClicked(index: Int)
     func didMinusClicked(index: Int)
 }
@@ -21,7 +21,7 @@ class CourseCell: UITableViewCell {
     @IBOutlet var minus: UIButton!
     @IBOutlet var detail: UILabel!
     var index: Int!
-    var delegate: CourseCellDelegate?
+    weak var delegate: CourseCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()

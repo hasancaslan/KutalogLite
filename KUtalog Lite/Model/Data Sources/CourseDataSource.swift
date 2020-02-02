@@ -16,7 +16,7 @@ protocol CourseDataSourceDelegate: AnyObject {
 class CourseDataSource {
     weak var delegate: CourseDataSourceDelegate?
     let utility = Utilities()
-    
+
     typealias loginFuncHandler = (_ completionHandler: @escaping (Error?) -> Void) -> Void
 
     fileprivate func courseHistoryDataCheck(_ data: Data, completionHandler: @escaping (Error?) -> Void) -> Bool {

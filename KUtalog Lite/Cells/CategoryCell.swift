@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol CategoryCellDelegate {
+protocol CategoryCellDelegate: AnyObject {
     func categoryDidChange(category: String?)
 }
 
 class CategoryCell: UITableViewCell {
     @IBOutlet weak var categoryTextField: UITextField!
-    var delegate: CategoryCellDelegate?
-    
+    weak var delegate: CategoryCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

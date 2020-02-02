@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol TermDetailDelegate {
+protocol TermDetailDelegate: AnyObject {
     func coursesDidChange(index: Int, newCourses: [Course])
 }
 
@@ -17,7 +17,7 @@ class TermDetailViewController: UIViewController {
     @IBOutlet weak var spaLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
     let utility = Utilities()
-    var delegate: TermDetailDelegate?
+    weak var delegate: TermDetailDelegate?
     var courses: [Course]!
     var indexInTerms: Int!
 

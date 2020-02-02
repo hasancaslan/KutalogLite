@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol InfoCellDelegate {
+protocol InfoCellDelegate: AnyObject {
     func infoDidChange(_ infoText: String?)
     func infoDidBeginEditing()
     func infoDidEndEditing()
@@ -16,8 +16,8 @@ protocol InfoCellDelegate {
 
 class InfoCell: UITableViewCell {
     @IBOutlet weak var infoTextField: UITextView!
-    var delegate: InfoCellDelegate?
-    
+    weak var delegate: InfoCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         infoTextField.delegate = self
@@ -34,11 +34,11 @@ extension InfoCell: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.delegate?.infoDidChange(textView.text)
     }
-    
+
     func textViewDidBeginEditing(_ textView: UITextView) {
         self.delegate?.infoDidBeginEditing()
     }
-    
+
     func textViewDidEndEditing(_ textView: UITextView) {
         self.delegate?.infoDidEndEditing()
     }

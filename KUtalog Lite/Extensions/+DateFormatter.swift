@@ -9,7 +9,7 @@
 import Foundation
 
 extension DateFormatter {
-    
+
     /// - returns: A string representation of date using the short date style.
     class func short(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -17,7 +17,7 @@ extension DateFormatter {
         dateFormatter.dateFormat = "EEEE, MMMM dd"
         return dateFormatter.string(from: date)
     }
-    
+
     /// - returns: A string representation of hour.
     class func hour(_ date: Date) -> String {
         let dateFormatter = DateFormatter()

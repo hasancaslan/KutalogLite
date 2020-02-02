@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol TitleCellDelegate {
+protocol TitleCellDelegate: AnyObject {
     func titleDidChange(title: String?)
 }
 
 class TitleCell: UITableViewCell {
     @IBOutlet weak var titleTextField: UITextField!
-    var delegate: TitleCellDelegate?
-    
+    weak var delegate: TitleCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         titleTextField?.text = nil

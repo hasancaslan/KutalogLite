@@ -11,7 +11,7 @@ import CoreData
 
 class TasksViewController: UIViewController {
     @IBOutlet weak var tasksTableView: UITableView!
-    
+
     var selectedRowIndex = -1
     var thereIsCellTapped = false
     var allTasks: [Task]? = [Task]()
@@ -21,34 +21,32 @@ class TasksViewController: UIViewController {
         source.delegate = self
         return source
     }()
-    
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tasksTableView.delegate = self
         tasksTableView.dataSource = self
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
            dataSource.loadListOfTasks()
        }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         selectedRowIndex = -1
     }
-    
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editTaskSegue" {
+            guard let destination = segue.destination as? AddTaskViewController else { return }
+            if selectedRowIndex >= 0 {
+                destination.editingTask = allTasks?[selectedRowIndex]
+            }
+        }
     }
-    */
-
 }
 
  // MARK: - TaskTableViewCellDelegate
@@ -65,9 +63,9 @@ extension TasksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == selectedRowIndex && thereIsCellTapped {
             if let cell = tableView.cellForRow(at: indexPath) as? TaskCell {
-                return 100 + cell.descriptionLabel.frame.height
+                return 120 + cell.descriptionLabel.frame.height
             }
-            return 100
+            return 120
         }
         return 60
     }
@@ -101,7 +99,7 @@ extension TasksViewController: UITableViewDataSource {
             let fetchedObjects = dataSource.fetchedResultsController.fetchedObjects
 //            let count = Int(Double(indexPath.row).truncatingRemainder(dividingBy: Double(CellColors.backgrounColors.count)))
 //         let background = CellColors.backgrounColors[count]
-            cell.configure(task: fetchedObjects?[indexPath.row], background: .white)
+            cell.configure(task: fetchedObjects?[indexPath.row], background: .maastrichtBlue)
             cell.delegate = self
             return cell
         }
@@ -163,4 +161,3 @@ extension TasksViewController: TasksDataSourceDelegate {
         tasksTableView.endUpdates()
     }
 }
-

@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol RemindCellDelegate {
+protocol RemindCellDelegate: AnyObject {
     func remindSwitchIsOn(_ isOn: Bool)
 }
 
 class RemindCell: UITableViewCell {
     @IBOutlet weak var remindSwitch: UISwitch!
-    var delegate: RemindCellDelegate?
-    
+    weak var delegate: RemindCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

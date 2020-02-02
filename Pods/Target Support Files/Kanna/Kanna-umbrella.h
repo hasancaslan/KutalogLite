@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Kanna 2.h"
 #import "Kanna.h"
 
 FOUNDATION_EXPORT double KannaVersionNumber;

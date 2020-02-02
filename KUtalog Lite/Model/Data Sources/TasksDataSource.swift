@@ -17,7 +17,7 @@ extension TasksDataSourceDelegate {
 }
 
 class TasksDataSource {
-    
+
     // MARK: - Core Data
     /**
      A persistent container to set up the Core Data stack.

@@ -44,6 +44,8 @@
 		F3C337F723E70FD6005A7BA0 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F623E70FD6005A7BA0 /* DatePickerCell.swift */; };
 		F3C337F923E75C26005A7BA0 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F823E75C26005A7BA0 /* CategoryCell.swift */; };
 		F3D934C623E5DAF9000CA580 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D934C523E5DAF9000CA580 /* CustomTabBar.swift */; };
+		F3DD419123E767EA00AC5189 /* +UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419023E767EA00AC5189 /* +UITextField.swift */; };
+		F3DD419323E7714500AC5189 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419223E7714500AC5189 /* ReminderManager.swift */; };
 		F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		F3C337F623E70FD6005A7BA0 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		F3C337F823E75C26005A7BA0 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		F3D934C523E5DAF9000CA580 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		F3DD419023E767EA00AC5189 /* +UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UITextField.swift"; sourceTree = "<group>"; };
+		F3DD419223E7714500AC5189 /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
 		F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AE0FE123D47B7F001B014B /* URLRequests.swift */,
+				F3DD419223E7714500AC5189 /* ReminderManager.swift */,
 				F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */,
 				F3C337F123E6FA61005A7BA0 /* Data Structures */,
 				F3C337F023E6FA55005A7BA0 /* Data Sources */,
@@ -221,6 +226,7 @@
 				F3463D5723D498DE000457A7 /* +LocalizedError.swift */,
 				F3C337EA23E6F8B7005A7BA0 /* +String.swift */,
 				F3C337F423E70C4D005A7BA0 /* +DateFormatter.swift */,
+				F3DD419023E767EA00AC5189 /* +UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				F3463D5823D498DE000457A7 /* +LocalizedError.swift in Sources */,
 				F3201AAB23D71450002565EF /* CourseCell.swift in Sources */,
 				F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */,
+				F3DD419123E767EA00AC5189 /* +UITextField.swift in Sources */,
 				F3463D5623D4961A000457A7 /* Alerts.swift in Sources */,
 				F3C337DD23E6EBF0005A7BA0 /* RemindCell.swift in Sources */,
 				F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */,
@@ -400,6 +407,7 @@
 				F3463D5E23D4CAF6000457A7 /* Utilities.swift in Sources */,
 				F3C337EF23E6FA19005A7BA0 /* DataController.swift in Sources */,
 				F3C337E523E6F3AB005A7BA0 /* AppDataTypes.swift in Sources */,
+				F3DD419323E7714500AC5189 /* ReminderManager.swift in Sources */,
 				F3C337F323E6FB1E005A7BA0 /* NewTask.swift in Sources */,
 				F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */,
 				F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */,
