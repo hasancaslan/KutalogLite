@@ -209,7 +209,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title=" Delete" image="trash.fill" catalog="system">
+                                                    <state key="normal" title=" Delete" image="trash.fill">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -224,7 +224,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title=" Edit" image="pencil" catalog="system">
+                                                    <state key="normal" title=" Edit" image="pencil">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -854,10 +854,10 @@
         <image name="logo-ku-login-white" width="265" height="95"/>
         <image name="magnifyingglass" width="16" height="16"/>
         <image name="minus.icon" width="137" height="138"/>
-        <image name="pencil" catalog="system" width="64" height="56"/>
+        <image name="pencil" width="14" height="14"/>
         <image name="plus.icon" width="137" height="138"/>
         <image name="square.and.pencil" width="17" height="17"/>
-        <image name="trash.fill" catalog="system" width="60" height="64"/>
+        <image name="trash.fill" width="16" height="19"/>
         <namedColor name="Baby Powder">
             <color red="0.99215686274509807" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
