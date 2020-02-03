@@ -83,7 +83,7 @@ class AddTaskViewController: UIViewController {
             if newTask.date == nil {
                 newTask.date = Date()
             }
-            
+
             if let taskToDelete = editingTask {
                 dataSource.deleteTask(taskToDelete)
                 alertTitle = "Your task is succesfully edited."

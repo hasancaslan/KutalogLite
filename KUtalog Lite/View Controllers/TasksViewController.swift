@@ -11,7 +11,7 @@ import CoreData
 
 class TasksViewController: UIViewController {
     @IBOutlet weak var tasksTableView: UITableView!
-    
+
     // MARK: - Properties
     var selectedRowIndex = -1
     var thereIsCellTapped = false
@@ -22,7 +22,7 @@ class TasksViewController: UIViewController {
         source.delegate = self
         return source
     }()
-    
+
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,16 +30,16 @@ class TasksViewController: UIViewController {
         tasksTableView.delegate = self
         tasksTableView.dataSource = self
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         dataSource.loadListOfTasks()
     }
-    
+
     override func viewDidDisappear(_ animated: Bool) {
         selectedRowIndex = -1
     }
-    
+
     // MARK: - Helpers
     fileprivate func setNavigationBar() {
         if #available(iOS 13.0, *) {
@@ -56,7 +56,7 @@ class TasksViewController: UIViewController {
             self.navigationController?.navigationBar.isTranslucent = false
         }
     }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editTaskSegue" {
@@ -88,7 +88,7 @@ extension TasksViewController: UITableViewDelegate {
         }
         return 60
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tasksTableView.cellForRow(at: indexPath)?.backgroundColor = .gray
         if self.selectedRowIndex != -1 {
@@ -112,7 +112,7 @@ extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.fetchedResultsController.fetchedObjects?.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.taskCell) as? TaskCell {
             let fetchedObjects = dataSource.fetchedResultsController.fetchedObjects
@@ -145,7 +145,7 @@ extension TasksViewController: NSFetchedResultsControllerDelegate {
             return
         }
     }
-    
+
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
                     didChange sectionInfo: NSFetchedResultsSectionInfo,
                     atSectionIndex sectionIndex: Int,
@@ -160,15 +160,15 @@ extension TasksViewController: NSFetchedResultsControllerDelegate {
             return
         }
     }
-    
+
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tasksTableView.beginUpdates()
     }
-    
+
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tasksTableView.endUpdates()
     }
-    
+
 }
 
 // MARK: - TasksDataSourceDelegate

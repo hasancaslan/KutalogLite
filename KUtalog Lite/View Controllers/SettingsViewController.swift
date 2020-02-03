@@ -32,20 +32,20 @@ class SettingsViewController: UIViewController {
 
     // MARK: - Helpers
     fileprivate func setNavigationBar() {
-           if #available(iOS 13.0, *) {
-               let navBarAppearance = UINavigationBarAppearance()
-               navBarAppearance.configureWithOpaqueBackground()
-               navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.babyPowder]
-               navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.babyPowder]
-               navBarAppearance.backgroundColor = UIColor.maastrichtBlue
-               self.navigationController?.navigationBar.standardAppearance = navBarAppearance
-               self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-               self.navigationController?.navigationBar.compactAppearance = navBarAppearance
-           } else {
-               self.navigationController?.navigationBar.backgroundColor = UIColor.maastrichtBlue
-               self.navigationController?.navigationBar.isTranslucent = false
-           }
-       }
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.backgroundColor = UIColor.maastrichtBlue
+            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+            self.navigationController?.navigationBar.compactAppearance = navBarAppearance
+        } else {
+            self.navigationController?.navigationBar.backgroundColor = UIColor.maastrichtBlue
+            self.navigationController?.navigationBar.isTranslucent = false
+        }
+    }
 
     // MARK: - Actions
     @IBAction func shareTapped(_ sender: Any) {
@@ -68,41 +68,59 @@ class SettingsViewController: UIViewController {
 // MARK: - UITableViewDataSource and Delegate
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingsCellData.count
+        if section == 0 {
+            return 1
+        } else {
+            return settingsCellData.count
+        }
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "USER"
+        } else {
+            return ""
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let setting = settingsCellData[indexPath.row]
+        let section = indexPath.section
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.settingsCell, for: indexPath)
-        cell.textLabel?.text = setting
+        if section == 0 {
+            let username = UserDefaults.standard.string(forKey: UserDefaultsKeys.usernameKey)
+            cell.textLabel?.text = username
+        } else {
+            let setting = settingsCellData[indexPath.row]
+            cell.textLabel?.text = setting
+        }
         return cell
     }
-    
-    
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let index = indexPath.row
+        let section = indexPath.section
+        if section == 1 {
+            switch index {
+            case 0:
+                if let url = URL(string: "https://kutalog.flycricket.io/privacy.html") {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
 
-        switch index {
-        case 0:
-            if let url = URL(string: "https://kutalog.flycricket.io/privacy.html") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            case 1:
+                if let url = URL(string: "https://flycricket.io/kutalog/terms.html") {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+
+            case 2:
+                SKStoreReviewController.requestReview()
+
+            default:
+                break
             }
-
-        case 1:
-            if let url = URL(string: "https://flycricket.io/kutalog/terms.html") {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-
-        case 2:
-            SKStoreReviewController.requestReview()
-
-        default:
-            break
         }
     }
 }
