@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-ku-login-white" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-QV-l5L">
-                                <rect key="frame" x="55" y="717" width="265" height="95"/>
+                                <rect key="frame" x="-77.666666666666686" y="622" width="530.33333333333337" height="190"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Maastricht Blue"/>
@@ -153,11 +153,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="121" id="sbC-Pn-bto" customClass="TaskCell" customModule="KUtalog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="121"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="94" id="sbC-Pn-bto" customClass="TaskCell" customModule="KUtalog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sbC-Pn-bto" id="vyz-YW-H3I">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" restorationIdentifier="TaskTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="95Z-uu-7WF">
@@ -202,7 +202,7 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-sk-HX2">
-                                                    <rect key="frame" x="96" y="76" width="80" height="30"/>
+                                                    <rect key="frame" x="98" y="76" width="86" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XkT-1s-fyv"/>
                                                         <constraint firstAttribute="height" constant="30" id="lwG-Z1-bq6"/>
@@ -217,7 +217,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-4k-jNe">
-                                                    <rect key="frame" x="20" y="76" width="60" height="30"/>
+                                                    <rect key="frame" x="20" y="76" width="62" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="imM-99-5xO"/>
                                                         <constraint firstAttribute="height" constant="30" id="u0h-ou-w1w"/>
@@ -473,6 +473,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OjF-cC-1Uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510" y="1249"/>
+        </scene>
+        <!--Class Search-->
+        <scene sceneID="55R-KL-nX5">
+            <objects>
+                <viewController id="NVP-4P-oZq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mff-YL-g9X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oLn-Oi-hGm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Class Search" image="magnifyingglass" selectedImage="magnifyingglass" id="4Vp-Qa-Jbd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TZ-aK-a6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4045.5999999999999" y="1184.4827586206898"/>
         </scene>
         <!--Course History-->
         <scene sceneID="1Mo-dH-ApB">
@@ -765,7 +781,7 @@
                         <segue destination="6p4-V3-Gyu" kind="relationship" relationship="viewControllers" id="I60-jJ-hgS"/>
                         <segue destination="XIB-Wb-rAW" kind="relationship" relationship="viewControllers" id="atO-QF-xhr"/>
                         <segue destination="qRr-d6-gbW" kind="relationship" relationship="viewControllers" id="bhD-cN-Gej"/>
-                        <segue destination="f4N-Rt-1AL" kind="relationship" relationship="viewControllers" id="xXy-p9-6P3"/>
+                        <segue destination="NVP-4P-oZq" kind="relationship" relationship="viewControllers" id="SCG-bP-mLh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xRe-WS-T8Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -830,99 +846,13 @@
             </objects>
             <point key="canvasLocation" x="938" y="1255"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="Dsa-RT-Y5s">
-            <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="f4N-Rt-1AL" customClass="SettingsViewController" customModule="KUtalog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="se7-My-26B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-Zx-DOa">
-                                <rect key="frame" x="0.0" y="44" width="375" height="288"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="288" id="nrK-TK-YzZ"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsCell" rowHeight="48" id="b8o-K7-HsS" customClass="SettingsCell" customModule="KUtalog">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b8o-K7-HsS" id="KlU-oT-S7X">
-                                            <rect key="frame" x="0.0" y="0.0" width="349" height="48"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-n1-Hyq">
-                                <rect key="frame" x="16" y="332" width="339" height="50"/>
-                                <color key="backgroundColor" name="Maastricht Blue"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="gkn-bM-Lez"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Share App">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareTapped:" destination="f4N-Rt-1AL" eventType="touchUpInside" id="GkB-e6-PzF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jML-mU-RHg">
-                                <rect key="frame" x="16" y="402" width="339" height="50"/>
-                                <color key="backgroundColor" name="Maastricht Blue"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="2Uh-p9-tLH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Log Out">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutTapped:" destination="f4N-Rt-1AL" eventType="touchUpInside" id="fjQ-DU-C9E"/>
-                                    <action selector="shareTapped:" destination="f4N-Rt-1AL" eventType="touchUpInside" id="OK2-na-80H"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="d2F-n1-Hyq" firstAttribute="top" secondItem="FTc-Zx-DOa" secondAttribute="bottom" id="4pg-Zc-2N3"/>
-                            <constraint firstItem="FTc-Zx-DOa" firstAttribute="leading" secondItem="DMd-8D-zMf" secondAttribute="leading" id="Amn-2m-Smm"/>
-                            <constraint firstItem="jML-mU-RHg" firstAttribute="trailing" secondItem="d2F-n1-Hyq" secondAttribute="trailing" id="D8q-OO-leD"/>
-                            <constraint firstItem="d2F-n1-Hyq" firstAttribute="leading" secondItem="DMd-8D-zMf" secondAttribute="leading" constant="16" id="HIQ-QI-JqB"/>
-                            <constraint firstItem="DMd-8D-zMf" firstAttribute="trailing" secondItem="d2F-n1-Hyq" secondAttribute="trailing" constant="20" id="N7s-zp-CQr"/>
-                            <constraint firstItem="FTc-Zx-DOa" firstAttribute="top" secondItem="DMd-8D-zMf" secondAttribute="top" id="NZu-7a-fLp"/>
-                            <constraint firstItem="DMd-8D-zMf" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="jML-mU-RHg" secondAttribute="bottom" constant="20" id="NiI-Gx-QKI"/>
-                            <constraint firstItem="jML-mU-RHg" firstAttribute="top" secondItem="d2F-n1-Hyq" secondAttribute="bottom" constant="20" id="Plo-ND-u43"/>
-                            <constraint firstItem="jML-mU-RHg" firstAttribute="leading" secondItem="d2F-n1-Hyq" secondAttribute="leading" id="gpY-Xx-V8R"/>
-                            <constraint firstItem="DMd-8D-zMf" firstAttribute="trailing" secondItem="FTc-Zx-DOa" secondAttribute="trailing" id="ndC-Cs-Qee"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DMd-8D-zMf"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" selectedImage="gear" id="xZ4-xL-hXm"/>
-                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="0gY-CD-H6S">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="BSa-Ax-bgs"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="logOutButton" destination="jML-mU-RHg" id="6h1-Ze-CfC"/>
-                        <outlet property="settingsTableView" destination="FTc-Zx-DOa" id="bRx-1j-WGb"/>
-                        <outlet property="shareApp" destination="d2F-n1-Hyq" id="YbQ-e6-aZm"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LvN-AM-tSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1174" y="-867"/>
-        </scene>
     </scenes>
     <resources>
         <image name="archivebox" width="17" height="16"/>
         <image name="calendar" width="17" height="16"/>
-        <image name="gear" width="19" height="19"/>
         <image name="logo" width="94" height="84"/>
         <image name="logo-ku-login-white" width="265" height="95"/>
+        <image name="magnifyingglass" width="16" height="16"/>
         <image name="minus.icon" width="137" height="138"/>
         <image name="pencil" width="14" height="14"/>
         <image name="plus.icon" width="137" height="138"/>

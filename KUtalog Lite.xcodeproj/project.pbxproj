@@ -47,6 +47,7 @@
 		F3DD419123E767EA00AC5189 /* +UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419023E767EA00AC5189 /* +UITextField.swift */; };
 		F3DD419323E7714500AC5189 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419223E7714500AC5189 /* ReminderManager.swift */; };
 		F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */; };
+		F3FCA24D23E87823007FB23D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCA24C23E87823007FB23D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		F3DD419023E767EA00AC5189 /* +UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UITextField.swift"; sourceTree = "<group>"; };
 		F3DD419223E7714500AC5189 /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
 		F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3FCA24C23E87823007FB23D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -214,6 +216,7 @@
 				F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */,
 				F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */,
 				F3C337E023E6ED0A005A7BA0 /* TasksViewController.swift */,
+				F3FCA24C23E87823007FB23D /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				F3C337F323E6FB1E005A7BA0 /* NewTask.swift in Sources */,
 				F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */,
 				F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */,
+				F3FCA24D23E87823007FB23D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

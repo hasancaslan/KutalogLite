@@ -20,6 +20,7 @@ struct CellIdentifiers {
     static let categoryCell = "categoryCell"
     static let infoCell = "infoCell"
     static let courseHistoryCell = "courseHistoryCell"
+    static let settingsCell = "SettingsCell"
 }
 
 // MARK: - View Controllers
