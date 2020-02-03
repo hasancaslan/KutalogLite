@@ -22,7 +22,7 @@ class TaskCell: UITableViewCell {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var descriptionLabelHeightAnchor: NSLayoutConstraint!
     @IBOutlet weak var topView: UIView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.text = ""
@@ -30,7 +30,7 @@ class TaskCell: UITableViewCell {
         timeLabel.text = ""
         descriptionLabel.text = ""
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         titleLabel.text = ""
@@ -41,11 +41,11 @@ class TaskCell: UITableViewCell {
         delegate = nil
         task = nil
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(false, animated: animated)
     }
-    
+
     func configure(task: Task?, background: UIColor) {
         self.task = task
         self.contentView.backgroundColor = background
@@ -69,7 +69,7 @@ class TaskCell: UITableViewCell {
             }
         }
     }
-    
+
     @IBAction func deleteTap(_ sender: Any) {
         self.delegate?.deleteTapped(task: task)
     }

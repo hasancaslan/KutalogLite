@@ -27,6 +27,7 @@
 		F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */; };
 		F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */; };
 		F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FE123D47B7F001B014B /* URLRequests.swift */; };
+		F3B5504B23E8A30300D44FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */; };
 		F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */; };
 		F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */; };
 		F3C337DB23E6EBE1005A7BA0 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */; };
@@ -77,6 +78,7 @@
 		F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KUtalog Lite.entitlements"; sourceTree = "<group>"; };
 		F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataSource.swift; sourceTree = "<group>"; };
 		F3AE0FE123D47B7F001B014B /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
+		F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */,
 				F3C337E023E6ED0A005A7BA0 /* TasksViewController.swift */,
 				F3FCA24C23E87823007FB23D /* SettingsViewController.swift */,
+				F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				F3C337ED23E6F94A005A7BA0 /* TasksDataSource.swift in Sources */,
 				F3C337E123E6ED0A005A7BA0 /* TasksViewController.swift in Sources */,
 				F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */,
+				F3B5504B23E8A30300D44FF6 /* TimetableViewController.swift in Sources */,
 				F3C337F723E70FD6005A7BA0 /* DatePickerCell.swift in Sources */,
 				F311ADBC23D482E5001A3DE3 /* LoginViewController.swift in Sources */,
 				F3D934C623E5DAF9000CA580 /* CustomTabBar.swift in Sources */,
@@ -490,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -544,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -563,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,7 +588,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

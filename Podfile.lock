@@ -1,4 +1,5 @@
 PODS:
+  - CircleBar (0.8.2)
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
   - Fabric (1.10.2)
@@ -77,6 +78,7 @@ PODS:
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
+  - CircleBar
   - Crashlytics
   - Fabric
   - Firebase/Analytics
@@ -85,6 +87,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CircleBar
     - Crashlytics
     - Fabric
     - Firebase
@@ -104,6 +107,7 @@ SPEC REPOS:
     - TextFieldEffects
 
 SPEC CHECKSUMS:
+  CircleBar: 8e17d2090e6e319b518010535a3145fb8fd68c22
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 497158b816d0a86fc31babbd05546fcd7e6083ff
@@ -122,6 +126,6 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 797dc9695246b11a08712ba60e3513912bc2dbbf
+PODFILE CHECKSUM: 25af0d63d159cedd78e37a60c03c49d4101969b7
 
 COCOAPODS: 1.8.4

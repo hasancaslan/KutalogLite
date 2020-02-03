@@ -16,11 +16,14 @@ class TermDetailViewController: UIViewController {
     @IBOutlet weak var termDetailTableView: UITableView!
     @IBOutlet weak var spaLabel: UILabel!
     @IBOutlet weak var creditsLabel: UILabel!
+
+     // MARK: - Properties
     let utility = Utilities()
     weak var delegate: TermDetailDelegate?
     var courses: [Course]!
     var indexInTerms: Int!
 
+     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         termDetailTableView.dataSource = self
@@ -36,6 +39,7 @@ class TermDetailViewController: UIViewController {
         delegate?.coursesDidChange(index: indexInTerms, newCourses: courses)
     }
 
+     // MARK: - Helpers
     func setSpaAndCreditLabels() {
         let spa = utility.calculateSPA(courses)
         let credits = utility.calculateSemesterCredits(courses)
@@ -65,16 +69,6 @@ class TermDetailViewController: UIViewController {
         setSpaAndCreditLabels()
         termDetailTableView.reloadData()
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
 
 // MARK: - UITableViewDataSource

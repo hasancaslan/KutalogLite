@@ -13,7 +13,7 @@ import UIKit
 enum SectionType: String, CustomStringConvertible {
     case title = "TITLE"
     case dueDate = "DUE DATE"
-    case category = "CATEGORY"
+    case category = "COURSE"
     case info = "INFO"
 
     var description: String {
@@ -43,7 +43,7 @@ class AddTaskViewController: UIViewController {
         addTaskTableView.dataSource = self
         hideKeyboardWhenTappedAround()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let task = editingTask {
@@ -51,7 +51,8 @@ class AddTaskViewController: UIViewController {
         }
     }
 
-    func addReminder() {
+     // MARK: - Helpers
+    fileprivate func addReminder() {
         guard let date = newTask.date else { return }
         let components = calendar.dateComponents([.second, .minute, .hour, .day, .month, .year], from: date)
         let dateComponents = DateComponents(calendar: calendar,
@@ -79,7 +80,9 @@ class AddTaskViewController: UIViewController {
         var success = false
 
         if newTask.title != "" && newTask.title != nil {
-            dataSource.createTask(newTask)
+            if newTask.date == nil {
+                newTask.date = Date()
+            }
             
             if let taskToDelete = editingTask {
                 dataSource.deleteTask(taskToDelete)
@@ -91,7 +94,8 @@ class AddTaskViewController: UIViewController {
             if reminderIsOn {
                 addReminder()
             }
-            
+
+            dataSource.createTask(newTask)
             success = true
         } else {
             alertTitle = "Please Enter a Title"
@@ -107,17 +111,6 @@ class AddTaskViewController: UIViewController {
 
         self.present(alert, animated: true)
     }
-
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }
 
 // MARK: - UITableViewDataSource and Delegate

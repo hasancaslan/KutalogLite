@@ -6,7 +6,7 @@
 //  Copyright © 2020 hasancanaslan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Table View Cells
 
@@ -21,6 +21,12 @@ struct CellIdentifiers {
     static let infoCell = "infoCell"
     static let courseHistoryCell = "courseHistoryCell"
     static let settingsCell = "SettingsCell"
+}
+
+// MARK: - Cell Color Palette
+
+struct CellColors {
+    static let backgrounColors = [UIColor(hexString: "f45905"), UIColor(hexString: "fb9224"), UIColor(hexString: "b83b5e"), UIColor(hexString: "2a1a5e")]
 }
 
 // MARK: - View Controllers

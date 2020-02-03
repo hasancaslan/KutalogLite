@@ -11,7 +11,8 @@ import CoreData
 
 class TasksViewController: UIViewController {
     @IBOutlet weak var tasksTableView: UITableView!
-
+    
+    // MARK: - Properties
     var selectedRowIndex = -1
     var thereIsCellTapped = false
     var allTasks: [Task]? = [Task]()
@@ -21,23 +22,41 @@ class TasksViewController: UIViewController {
         source.delegate = self
         return source
     }()
-
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         tasksTableView.delegate = self
         tasksTableView.dataSource = self
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           dataSource.loadListOfTasks()
-       }
-
+        super.viewWillAppear(animated)
+        dataSource.loadListOfTasks()
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         selectedRowIndex = -1
     }
-
+    
+    // MARK: - Helpers
+    fileprivate func setNavigationBar() {
+        if #available(iOS 13.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.babyPowder]
+            navBarAppearance.backgroundColor = UIColor.maastrichtBlue
+            self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+            self.navigationController?.navigationBar.compactAppearance = navBarAppearance
+        } else {
+            self.navigationController?.navigationBar.backgroundColor = UIColor.maastrichtBlue
+            self.navigationController?.navigationBar.isTranslucent = false
+        }
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editTaskSegue" {
@@ -49,7 +68,7 @@ class TasksViewController: UIViewController {
     }
 }
 
- // MARK: - TaskTableViewCellDelegate
+// MARK: - TaskTableViewCellDelegate
 extension TasksViewController: TaskTableViewCellDelegate {
     func deleteTapped(task: Task?) {
         if let taskToDelete = task {
@@ -69,7 +88,7 @@ extension TasksViewController: UITableViewDelegate {
         }
         return 60
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tasksTableView.cellForRow(at: indexPath)?.backgroundColor = .gray
         if self.selectedRowIndex != -1 {
@@ -93,13 +112,13 @@ extension TasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.fetchedResultsController.fetchedObjects?.count ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.taskCell) as? TaskCell {
             let fetchedObjects = dataSource.fetchedResultsController.fetchedObjects
-//            let count = Int(Double(indexPath.row).truncatingRemainder(dividingBy: Double(CellColors.backgrounColors.count)))
-//         let background = CellColors.backgrounColors[count]
-            cell.configure(task: fetchedObjects?[indexPath.row], background: .maastrichtBlue)
+            let count = Int(Double(indexPath.row).truncatingRemainder(dividingBy: Double(CellColors.backgrounColors.count)))
+            let background = CellColors.backgrounColors[count]
+            cell.configure(task: fetchedObjects?[indexPath.row], background: background)
             cell.delegate = self
             return cell
         }
@@ -126,7 +145,7 @@ extension TasksViewController: NSFetchedResultsControllerDelegate {
             return
         }
     }
-
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
                     didChange sectionInfo: NSFetchedResultsSectionInfo,
                     atSectionIndex sectionIndex: Int,
@@ -141,15 +160,15 @@ extension TasksViewController: NSFetchedResultsControllerDelegate {
             return
         }
     }
-
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tasksTableView.beginUpdates()
     }
-
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tasksTableView.endUpdates()
     }
-
+    
 }
 
 // MARK: - TasksDataSourceDelegate

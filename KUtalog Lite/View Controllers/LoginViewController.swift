@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     var dataSource = CourseDataSource()
 
+     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource.delegate = self
@@ -77,6 +78,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+ // MARK: - CourseDataSourceDelegate
 extension LoginViewController: CourseDataSourceDelegate {
     func termListLoaded(termList: [[Course]]) {
         navigateToCourseHistory(termList)

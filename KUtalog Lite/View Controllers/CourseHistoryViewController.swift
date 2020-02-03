@@ -107,7 +107,7 @@ class CourseHistoryViewController: UIViewController {
         self.courseHistoryTableView.contentInset = inset
     }
 
-    func setNavigationBar() {
+    fileprivate func setNavigationBar() {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
