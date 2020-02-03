@@ -7,34 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A053AA9D589999D875CB2089 /* Pods_KUtalog_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */; };
+		92F9D05EA0E275478EB6A4EB /* Pods_KUtalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */; };
+		F311ADB823D48067001A3DE3 /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADB723D48067001A3DE3 /* +UIColor.swift */; };
+		F311ADBC23D482E5001A3DE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */; };
+		F311ADBE23D485B3001A3DE3 /* +UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F311ADBD23D485B3001A3DE3 /* +UIViewController.swift */; };
+		F3201AAB23D71450002565EF /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3201AAA23D71450002565EF /* CourseCell.swift */; };
+		F3463D5623D4961A000457A7 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5523D4961A000457A7 /* Alerts.swift */; };
+		F3463D5823D498DE000457A7 /* +LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5723D498DE000457A7 /* +LocalizedError.swift */; };
+		F3463D5A23D4A4EC000457A7 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5923D4A4EC000457A7 /* Course.swift */; };
+		F3463D5C23D4A50E000457A7 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5B23D4A50E000457A7 /* Lecture.swift */; };
+		F3463D5E23D4CAF6000457A7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5D23D4CAF6000457A7 /* Utilities.swift */; };
+		F3463D6023D5BBEC000457A7 /* CourseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */; };
+		F3463D6223D5C210000457A7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6123D5C210000457A7 /* Reachability.swift */; };
+		F3463D6423D5E27E000457A7 /* TermDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */; };
 		F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC623D477C5001B014B /* AppDelegate.swift */; };
-		F3AE0FC923D477C5001B014B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC823D477C5001B014B /* SceneDelegate.swift */; };
-		F3AE0FCB23D477C5001B014B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCA23D477C5001B014B /* ViewController.swift */; };
 		F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FCC23D477C5001B014B /* Main.storyboard */; };
 		F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */; };
 		F3AE0FD323D477C8001B014B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD223D477C8001B014B /* Assets.xcassets */; };
 		F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */; };
-		F3AE0FE023D47B5E001B014B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* DataSource.swift */; };
+		F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */; };
 		F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FE123D47B7F001B014B /* URLRequests.swift */; };
+		F3B5504B23E8A30300D44FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */; };
+		F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */; };
+		F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */; };
+		F3C337DB23E6EBE1005A7BA0 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */; };
+		F3C337DD23E6EBF0005A7BA0 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337DC23E6EBF0005A7BA0 /* RemindCell.swift */; };
+		F3C337DF23E6ECF6005A7BA0 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337DE23E6ECF6005A7BA0 /* TaskCell.swift */; };
+		F3C337E123E6ED0A005A7BA0 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337E023E6ED0A005A7BA0 /* TasksViewController.swift */; };
+		F3C337E323E6F34F005A7BA0 /* +Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337E223E6F34F005A7BA0 /* +Task.swift */; };
+		F3C337E523E6F3AB005A7BA0 /* AppDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337E423E6F3AB005A7BA0 /* AppDataTypes.swift */; };
+		F3C337E723E6F63F005A7BA0 /* AppProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337E623E6F63F005A7BA0 /* AppProtocols.swift */; };
+		F3C337EB23E6F8B7005A7BA0 /* +String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337EA23E6F8B7005A7BA0 /* +String.swift */; };
+		F3C337ED23E6F94A005A7BA0 /* TasksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337EC23E6F94A005A7BA0 /* TasksDataSource.swift */; };
+		F3C337EF23E6FA19005A7BA0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337EE23E6FA19005A7BA0 /* DataController.swift */; };
+		F3C337F323E6FB1E005A7BA0 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F223E6FB1E005A7BA0 /* NewTask.swift */; };
+		F3C337F523E70C4D005A7BA0 /* +DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F423E70C4D005A7BA0 /* +DateFormatter.swift */; };
+		F3C337F723E70FD6005A7BA0 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F623E70FD6005A7BA0 /* DatePickerCell.swift */; };
+		F3C337F923E75C26005A7BA0 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337F823E75C26005A7BA0 /* CategoryCell.swift */; };
+		F3D934C623E5DAF9000CA580 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D934C523E5DAF9000CA580 /* CustomTabBar.swift */; };
+		F3DD419123E767EA00AC5189 /* +UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419023E767EA00AC5189 /* +UITextField.swift */; };
+		F3DD419323E7714500AC5189 /* ReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DD419223E7714500AC5189 /* ReminderManager.swift */; };
+		F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */; };
+		F3FCA24D23E87823007FB23D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCA24C23E87823007FB23D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.release.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.release.xcconfig"; sourceTree = "<group>"; };
-		6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog.release.xcconfig"; path = "Target Support Files/Pods-KUtalog/Pods-KUtalog.release.xcconfig"; sourceTree = "<group>"; };
 		AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.debug.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.debug.xcconfig"; sourceTree = "<group>"; };
-		F3AE0FC323D477C5001B014B /* KUtalog Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KUtalog Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog.debug.xcconfig"; path = "Target Support Files/Pods-KUtalog/Pods-KUtalog.debug.xcconfig"; sourceTree = "<group>"; };
+		F311ADB723D48067001A3DE3 /* +UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIColor.swift"; sourceTree = "<group>"; };
+		F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F311ADBD23D485B3001A3DE3 /* +UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIViewController.swift"; sourceTree = "<group>"; };
+		F3201AAA23D71450002565EF /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		F3463D5523D4961A000457A7 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		F3463D5723D498DE000457A7 /* +LocalizedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+LocalizedError.swift"; sourceTree = "<group>"; };
+		F3463D5923D4A4EC000457A7 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		F3463D5B23D4A50E000457A7 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		F3463D5D23D4CAF6000457A7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHistoryViewController.swift; sourceTree = "<group>"; };
+		F3463D6123D5C210000457A7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermDetailViewController.swift; sourceTree = "<group>"; };
+		F3AE0FC323D477C5001B014B /* KUtalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KUtalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE0FC623D477C5001B014B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3AE0FC823D477C5001B014B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3AE0FCA23D477C5001B014B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3AE0FCD23D477C5001B014B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3AE0FD023D477C5001B014B /* KUtalog_Lite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KUtalog_Lite.xcdatamodel; sourceTree = "<group>"; };
 		F3AE0FD223D477C8001B014B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3AE0FD523D477C8001B014B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AE0FD723D477C8001B014B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KUtalog Lite.entitlements"; sourceTree = "<group>"; };
-		F3AE0FDF23D47B5E001B014B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataSource.swift; sourceTree = "<group>"; };
 		F3AE0FE123D47B7F001B014B /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
+		F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		F3C337DC23E6EBF0005A7BA0 /* RemindCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindCell.swift; sourceTree = "<group>"; };
+		F3C337DE23E6ECF6005A7BA0 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskCell.swift; path = "KUtalog Lite/View Controllers/TaskCell.swift"; sourceTree = SOURCE_ROOT; };
+		F3C337E023E6ED0A005A7BA0 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		F3C337E223E6F34F005A7BA0 /* +Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+Task.swift"; sourceTree = "<group>"; };
+		F3C337E423E6F3AB005A7BA0 /* AppDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTypes.swift; sourceTree = "<group>"; };
+		F3C337E623E6F63F005A7BA0 /* AppProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocols.swift; sourceTree = "<group>"; };
+		F3C337EA23E6F8B7005A7BA0 /* +String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+String.swift"; sourceTree = "<group>"; };
+		F3C337EC23E6F94A005A7BA0 /* TasksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksDataSource.swift; sourceTree = "<group>"; };
+		F3C337EE23E6FA19005A7BA0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		F3C337F223E6FB1E005A7BA0 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
+		F3C337F423E70C4D005A7BA0 /* +DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+DateFormatter.swift"; sourceTree = "<group>"; };
+		F3C337F623E70FD6005A7BA0 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		F3C337F823E75C26005A7BA0 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		F3D934C523E5DAF9000CA580 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		F3DD419023E767EA00AC5189 /* +UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UITextField.swift"; sourceTree = "<group>"; };
+		F3DD419223E7714500AC5189 /* ReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+		F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3FCA24C23E87823007FB23D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KUtalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A053AA9D589999D875CB2089 /* Pods_KUtalog_Lite.framework in Frameworks */,
+				92F9D05EA0E275478EB6A4EB /* Pods_KUtalog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +120,8 @@
 			children = (
 				AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */,
 				26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */,
+				CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */,
+				A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -61,9 +129,35 @@
 		DB1DA87D688CCC926C7CDA28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B7E47FDF778E721CF28F66E /* Pods_KUtalog_Lite.framework */,
+				FB3A2295B4EFA544AF1A3F94 /* Pods_KUtalog.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3463D5423D4960A000457A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F3463D5523D4961A000457A7 /* Alerts.swift */,
+				F3463D5D23D4CAF6000457A7 /* Utilities.swift */,
+				F3463D6123D5C210000457A7 /* Reachability.swift */,
+				F3C337E423E6F3AB005A7BA0 /* AppDataTypes.swift */,
+				F3C337E623E6F63F005A7BA0 /* AppProtocols.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F3463D6523D60E1D000457A7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F3C337DE23E6ECF6005A7BA0 /* TaskCell.swift */,
+				F3201AAA23D71450002565EF /* CourseCell.swift */,
+				F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */,
+				F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */,
+				F3C337DC23E6EBF0005A7BA0 /* RemindCell.swift */,
+				F3C337F623E70FD6005A7BA0 /* DatePickerCell.swift */,
+				F3C337F823E75C26005A7BA0 /* CategoryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F3AE0FBA23D477C5001B014B = {
@@ -79,7 +173,7 @@
 		F3AE0FC423D477C5001B014B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3AE0FC323D477C5001B014B /* KUtalog Lite.app */,
+				F3AE0FC323D477C5001B014B /* KUtalog.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,19 +181,19 @@
 		F3AE0FC523D477C5001B014B /* KUtalog Lite */ = {
 			isa = PBXGroup;
 			children = (
+				F3AE0FC623D477C5001B014B /* AppDelegate.swift */,
+				F3AE0FCC23D477C5001B014B /* Main.storyboard */,
+				F3463D6523D60E1D000457A7 /* Cells */,
+				F3463D5423D4960A000457A7 /* Helpers */,
 				F3AE0FE523D47C22001B014B /* Resources */,
 				F3AE0FE423D47C1C001B014B /* Extensions */,
 				F3AE0FE323D47B90001B014B /* View Controllers */,
 				F3AE0FDE23D47B4B001B014B /* Model */,
-				F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */,
-				F3AE0FC623D477C5001B014B /* AppDelegate.swift */,
-				F3AE0FC823D477C5001B014B /* SceneDelegate.swift */,
-				F3AE0FCA23D477C5001B014B /* ViewController.swift */,
-				F3AE0FCC23D477C5001B014B /* Main.storyboard */,
 				F3AE0FD223D477C8001B014B /* Assets.xcassets */,
 				F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */,
+				F3AE0FDD23D47B22001B014B /* KUtalog Lite.entitlements */,
 				F3AE0FD723D477C8001B014B /* Info.plist */,
-				F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */,
+				F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */,
 			);
 			path = "KUtalog Lite";
 			sourceTree = "<group>";
@@ -107,8 +201,11 @@
 		F3AE0FDE23D47B4B001B014B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F3AE0FDF23D47B5E001B014B /* DataSource.swift */,
 				F3AE0FE123D47B7F001B014B /* URLRequests.swift */,
+				F3DD419223E7714500AC5189 /* ReminderManager.swift */,
+				F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */,
+				F3C337F123E6FA61005A7BA0 /* Data Structures */,
+				F3C337F023E6FA55005A7BA0 /* Data Sources */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +213,13 @@
 		F3AE0FE323D47B90001B014B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F311ADBB23D482E5001A3DE3 /* LoginViewController.swift */,
+				F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */,
+				F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */,
+				F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */,
+				F3C337E023E6ED0A005A7BA0 /* TasksViewController.swift */,
+				F3FCA24C23E87823007FB23D /* SettingsViewController.swift */,
+				F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -123,6 +227,12 @@
 		F3AE0FE423D47C1C001B014B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F311ADB723D48067001A3DE3 /* +UIColor.swift */,
+				F311ADBD23D485B3001A3DE3 /* +UIViewController.swift */,
+				F3463D5723D498DE000457A7 /* +LocalizedError.swift */,
+				F3C337EA23E6F8B7005A7BA0 /* +String.swift */,
+				F3C337F423E70C4D005A7BA0 /* +DateFormatter.swift */,
+				F3DD419023E767EA00AC5189 /* +UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -130,16 +240,38 @@
 		F3AE0FE523D47C22001B014B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F3D934C523E5DAF9000CA580 /* CustomTabBar.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3C337F023E6FA55005A7BA0 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */,
+				F3C337EC23E6F94A005A7BA0 /* TasksDataSource.swift */,
+				F3C337EE23E6FA19005A7BA0 /* DataController.swift */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		F3C337F123E6FA61005A7BA0 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				F3463D5923D4A4EC000457A7 /* Course.swift */,
+				F3463D5B23D4A50E000457A7 /* Lecture.swift */,
+				F3C337E223E6F34F005A7BA0 /* +Task.swift */,
+				F3C337F223E6FB1E005A7BA0 /* NewTask.swift */,
+			);
+			path = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3AE0FC223D477C5001B014B /* KUtalog Lite */ = {
+		F3AE0FC223D477C5001B014B /* KUtalog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3AE0FDA23D477C8001B014B /* Build configuration list for PBXNativeTarget "KUtalog Lite" */;
+			buildConfigurationList = F3AE0FDA23D477C8001B014B /* Build configuration list for PBXNativeTarget "KUtalog" */;
 			buildPhases = (
 				B378495AE643531120E231D5 /* [CP] Check Pods Manifest.lock */,
 				F3AE0FBF23D477C5001B014B /* Sources */,
@@ -151,9 +283,9 @@
 			);
 			dependencies = (
 			);
-			name = "KUtalog Lite";
+			name = KUtalog;
 			productName = "KUtalog Lite";
-			productReference = F3AE0FC323D477C5001B014B /* KUtalog Lite.app */;
+			productReference = F3AE0FC323D477C5001B014B /* KUtalog.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -184,7 +316,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3AE0FC223D477C5001B014B /* KUtalog Lite */,
+				F3AE0FC223D477C5001B014B /* KUtalog */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */,
+				F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */,
 				F3AE0FD323D477C8001B014B /* Assets.xcassets in Resources */,
 				F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */,
 			);
@@ -209,15 +342,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KUtalog/Pods-KUtalog-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B378495AE643531120E231D5 /* [CP] Check Pods Manifest.lock */ = {
@@ -235,7 +368,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KUtalog Lite-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KUtalog-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -249,12 +382,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3AE0FCB23D477C5001B014B /* ViewController.swift in Sources */,
+				F3C337F523E70C4D005A7BA0 /* +DateFormatter.swift in Sources */,
+				F3C337F923E75C26005A7BA0 /* CategoryCell.swift in Sources */,
+				F3463D5C23D4A50E000457A7 /* Lecture.swift in Sources */,
+				F3463D5A23D4A4EC000457A7 /* Course.swift in Sources */,
+				F3463D6423D5E27E000457A7 /* TermDetailViewController.swift in Sources */,
 				F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */,
+				F3463D6023D5BBEC000457A7 /* CourseHistoryViewController.swift in Sources */,
+				F3C337E723E6F63F005A7BA0 /* AppProtocols.swift in Sources */,
+				F311ADBE23D485B3001A3DE3 /* +UIViewController.swift in Sources */,
+				F3C337ED23E6F94A005A7BA0 /* TasksDataSource.swift in Sources */,
+				F3C337E123E6ED0A005A7BA0 /* TasksViewController.swift in Sources */,
 				F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */,
+				F3B5504B23E8A30300D44FF6 /* TimetableViewController.swift in Sources */,
+				F3C337F723E70FD6005A7BA0 /* DatePickerCell.swift in Sources */,
+				F311ADBC23D482E5001A3DE3 /* LoginViewController.swift in Sources */,
+				F3D934C623E5DAF9000CA580 /* CustomTabBar.swift in Sources */,
+				F3C337DB23E6EBE1005A7BA0 /* InfoCell.swift in Sources */,
+				F3463D6223D5C210000457A7 /* Reachability.swift in Sources */,
+				F311ADB823D48067001A3DE3 /* +UIColor.swift in Sources */,
+				F3463D5823D498DE000457A7 /* +LocalizedError.swift in Sources */,
+				F3201AAB23D71450002565EF /* CourseCell.swift in Sources */,
 				F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */,
-				F3AE0FE023D47B5E001B014B /* DataSource.swift in Sources */,
-				F3AE0FC923D477C5001B014B /* SceneDelegate.swift in Sources */,
+				F3DD419123E767EA00AC5189 /* +UITextField.swift in Sources */,
+				F3463D5623D4961A000457A7 /* Alerts.swift in Sources */,
+				F3C337DD23E6EBF0005A7BA0 /* RemindCell.swift in Sources */,
+				F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */,
+				F3C337DF23E6ECF6005A7BA0 /* TaskCell.swift in Sources */,
+				F3C337E323E6F34F005A7BA0 /* +Task.swift in Sources */,
+				F3C337EB23E6F8B7005A7BA0 /* +String.swift in Sources */,
+				F3463D5E23D4CAF6000457A7 /* Utilities.swift in Sources */,
+				F3C337EF23E6FA19005A7BA0 /* DataController.swift in Sources */,
+				F3C337E523E6F3AB005A7BA0 /* AppDataTypes.swift in Sources */,
+				F3DD419323E7714500AC5189 /* ReminderManager.swift in Sources */,
+				F3C337F323E6FB1E005A7BA0 /* NewTask.swift in Sources */,
+				F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */,
+				F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */,
+				F3FCA24D23E87823007FB23D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -384,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -396,20 +560,20 @@
 		};
 		F3AE0FDB23D477C8001B014B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD4C0F734BDC38EE4DB241A2 /* Pods-KUtalog Lite.debug.xcconfig */;
+			baseConfigurationReference = CFB4A288E778FA62F5D8A758 /* Pods-KUtalog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hasancanaslan.KUtalog-Lite";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KUtalog;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,20 +581,20 @@
 		};
 		F3AE0FDC23D477C8001B014B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */;
+			baseConfigurationReference = A49891495C835B7640AF807D /* Pods-KUtalog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hasancanaslan.KUtalog-Lite";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KUtalog;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3AE0FDA23D477C8001B014B /* Build configuration list for PBXNativeTarget "KUtalog Lite" */ = {
+		F3AE0FDA23D477C8001B014B /* Build configuration list for PBXNativeTarget "KUtalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3AE0FDB23D477C8001B014B /* Debug */,
