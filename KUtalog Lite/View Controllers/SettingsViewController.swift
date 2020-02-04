@@ -92,6 +92,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.settingsCell, for: indexPath)
         if section == 0 {
             let username = UserDefaults.standard.string(forKey: UserDefaultsKeys.usernameKey)
+            cell.isUserInteractionEnabled = false
             cell.textLabel?.text = username
         } else {
             let setting = settingsCellData[indexPath.row]
@@ -101,6 +102,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let index = indexPath.row
         let section = indexPath.section
         if section == 1 {

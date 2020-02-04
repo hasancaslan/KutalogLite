@@ -9,7 +9,7 @@
 import UIKit
 
 class SHCircleBarController: UITabBarController {
-
+    
     fileprivate var shouldSelectOnTabBar = true
     private var circleView : UIView!
     private var circleImageView: UIImageView!
@@ -63,6 +63,27 @@ class SHCircleBarController: UITabBarController {
         super.viewWillAppear(animated)
         circleImageView.image = image(with: self.tabBar.selectedItem?.image ?? self.tabBar.items?.first?.image, scaledTo: CGSize(width: 30, height: 30))
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let idx = 0
+        selectedIndex = idx
+        let tabWidth = self.view.bounds.width / CGFloat(self.tabBar.items!.count)
+        UIView.animate(withDuration: 0.3) {
+            self.circleView.frame = CGRect(x: (tabWidth * CGFloat(idx) + tabWidth / 2 - 30), y: self.tabBar.frame.origin.y - 15, width: 60, height: 60)
+        }
+        UIView.animate(withDuration: 0.15, animations: {
+            self.circleImageView.alpha = 0
+        }) { (_) in
+            self.circleImageView.image = self.image(with: self.tabBar.items?[idx].image, scaledTo: CGSize(width: 30, height: 30))
+            UIView.animate(withDuration: 0.15, animations: {
+                self.circleImageView.alpha = 1
+            })
+        }
+        if let controller = viewControllers?[idx] {
+            delegate?.tabBarController?(self, didSelect: controller)
+        }
     }
     
     private var _barHeight: CGFloat = 74
