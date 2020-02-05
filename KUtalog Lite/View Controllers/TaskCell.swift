@@ -22,13 +22,17 @@ class TaskCell: UITableViewCell {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var descriptionLabelHeightAnchor: NSLayoutConstraint!
     @IBOutlet weak var topView: UIView!
-
+    @IBOutlet weak var deleteButtonVEView: UIVisualEffectView!
+    @IBOutlet weak var editButtonVEView: UIVisualEffectView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.text = ""
         courseCodeLabel.text = ""
         timeLabel.text = ""
         descriptionLabel.text = ""
+        editButtonVEView.layer.cornerRadius = 13
+        deleteButtonVEView.layer.cornerRadius = 13
     }
 
     override func prepareForReuse() {

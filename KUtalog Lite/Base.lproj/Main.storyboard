@@ -231,9 +231,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBP-aL-i7h">
-                                                    <rect key="frame" x="20" y="77" width="60" height="34"/>
+                                                    <rect key="frame" x="20" y="75" width="60" height="32"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m8s-sD-DHn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jix-5a-C7w">
@@ -246,10 +246,10 @@
                                                                 </vibrancyEffect>
                                                             </visualEffectView>
                                                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-4k-jNe">
-                                                                <rect key="frame" x="0.0" y="2" width="60" height="30"/>
+                                                                <rect key="frame" x="0.0" y="-1" width="60" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="imM-99-5xO"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="u0h-ou-w1w"/>
+                                                                    <constraint firstAttribute="height" constant="34" id="u0h-ou-w1w"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -268,12 +268,12 @@
                                                     </view>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="CdX-mH-CRT"/>
-                                                        <constraint firstAttribute="height" constant="34" id="MUw-bB-rDg"/>
+                                                        <constraint firstAttribute="height" constant="32" id="MUw-bB-rDg"/>
                                                     </constraints>
                                                     <blurEffect style="regular"/>
                                                 </visualEffectView>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-0y-4Eg">
-                                                    <rect key="frame" x="96" y="77" width="80" height="34"/>
+                                                    <rect key="frame" x="96" y="74" width="80" height="34"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LFh-0k-HVN">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,10 +288,10 @@
                                                                 </vibrancyEffect>
                                                             </visualEffectView>
                                                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-sk-HX2">
-                                                                <rect key="frame" x="0.0" y="2" width="80" height="30"/>
+                                                                <rect key="frame" x="0.0" y="1" width="80" height="32"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XkT-1s-fyv"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="lwG-Z1-bq6"/>
+                                                                    <constraint firstAttribute="height" constant="32" id="lwG-Z1-bq6"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -322,7 +322,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="7YC-Yb-fjC" secondAttribute="trailing" constant="20" id="FVp-Ft-fZd"/>
                                                 <constraint firstItem="BfD-0y-4Eg" firstAttribute="centerY" secondItem="gfG-4k-jNe" secondAttribute="centerY" id="MBh-81-gHO"/>
                                                 <constraint firstItem="95Z-uu-7WF" firstAttribute="top" secondItem="vyz-YW-H3I" secondAttribute="top" id="NRd-xy-elt"/>
-                                                <constraint firstItem="CBP-aL-i7h" firstAttribute="top" secondItem="7YC-Yb-fjC" secondAttribute="bottom" constant="17" id="She-3d-jxl"/>
+                                                <constraint firstItem="CBP-aL-i7h" firstAttribute="top" secondItem="7YC-Yb-fjC" secondAttribute="bottom" constant="15" id="She-3d-jxl"/>
                                                 <constraint firstAttribute="trailing" secondItem="95Z-uu-7WF" secondAttribute="trailing" id="foD-EQ-z2L"/>
                                                 <constraint firstItem="CBP-aL-i7h" firstAttribute="leading" secondItem="vyz-YW-H3I" secondAttribute="leading" constant="20" id="hOb-Qa-TJ0"/>
                                                 <constraint firstItem="7YC-Yb-fjC" firstAttribute="top" secondItem="95Z-uu-7WF" secondAttribute="bottom" id="tXG-2d-eAD"/>
@@ -332,9 +332,11 @@
                                         <connections>
                                             <outlet property="courseCodeLabel" destination="caz-14-Hj7" id="JiH-9Q-0la"/>
                                             <outlet property="deleteButton" destination="fSA-sk-HX2" id="h09-R0-jfz"/>
+                                            <outlet property="deleteButtonVEView" destination="BfD-0y-4Eg" id="jlx-74-oYb"/>
                                             <outlet property="descriptionLabel" destination="7YC-Yb-fjC" id="87l-0T-Jmg"/>
                                             <outlet property="descriptionLabelHeightAnchor" destination="43X-88-tU8" id="2jt-W3-j2z"/>
                                             <outlet property="editButton" destination="gfG-4k-jNe" id="gPq-Xl-bH4"/>
+                                            <outlet property="editButtonVEView" destination="CBP-aL-i7h" id="lbq-9p-Lcf"/>
                                             <outlet property="timeLabel" destination="Bfw-9N-JWg" id="3YQ-Pv-VzQ"/>
                                             <outlet property="titleLabel" destination="HOW-GH-WY4" id="Sn6-q3-PWg"/>
                                             <outlet property="topView" destination="95Z-uu-7WF" id="egc-HQ-osU"/>
