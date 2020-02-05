@@ -230,7 +230,7 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBP-aL-i7h">
+                                                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBP-aL-i7h">
                                                     <rect key="frame" x="20" y="75" width="60" height="32"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m8s-sD-DHn">
                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="32"/>
@@ -246,14 +246,14 @@
                                                                 </vibrancyEffect>
                                                             </visualEffectView>
                                                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-4k-jNe">
-                                                                <rect key="frame" x="0.0" y="-1" width="60" height="34"/>
+                                                                <rect key="frame" x="-2.3333333333333321" y="-1" width="65" height="34"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="imM-99-5xO"/>
+                                                                    <constraint firstAttribute="width" constant="65" id="imM-99-5xO"/>
                                                                     <constraint firstAttribute="height" constant="34" id="u0h-ou-w1w"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title=" Edit" image="pencil">
+                                                                <state key="normal" title=" Edit " image="pencil">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>
@@ -272,8 +272,8 @@
                                                     </constraints>
                                                     <blurEffect style="regular"/>
                                                 </visualEffectView>
-                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-0y-4Eg">
-                                                    <rect key="frame" x="96" y="74" width="80" height="34"/>
+                                                <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-0y-4Eg">
+                                                    <rect key="frame" x="98.666666666666686" y="74" width="80" height="34"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LFh-0k-HVN">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,14 +288,14 @@
                                                                 </vibrancyEffect>
                                                             </visualEffectView>
                                                             <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-sk-HX2">
-                                                                <rect key="frame" x="0.0" y="1" width="80" height="32"/>
+                                                                <rect key="frame" x="-2.6666666666666714" y="1" width="85" height="32"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XkT-1s-fyv"/>
+                                                                    <constraint firstAttribute="width" constant="85" id="XkT-1s-fyv"/>
                                                                     <constraint firstAttribute="height" constant="32" id="lwG-Z1-bq6"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <state key="normal" title=" Delete" image="trash.fill">
+                                                                <state key="normal" title=" Delete " image="trash.fill">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <connections>

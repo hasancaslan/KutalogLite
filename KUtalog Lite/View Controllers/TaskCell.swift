@@ -31,8 +31,8 @@ class TaskCell: UITableViewCell {
         courseCodeLabel.text = ""
         timeLabel.text = ""
         descriptionLabel.text = ""
-        editButtonVEView.layer.cornerRadius = 13
-        deleteButtonVEView.layer.cornerRadius = 13
+        editButtonVEView.layer.cornerRadius = 7
+        deleteButtonVEView.layer.cornerRadius = 7
     }
 
     override func prepareForReuse() {
