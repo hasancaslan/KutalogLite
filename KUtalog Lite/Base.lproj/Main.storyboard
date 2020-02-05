@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-ku-login-white" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-QV-l5L">
-                                <rect key="frame" x="55" y="717" width="265" height="95"/>
+                                <rect key="frame" x="-77.666666666666686" y="622" width="530.33333333333337" height="190"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Maastricht Blue"/>

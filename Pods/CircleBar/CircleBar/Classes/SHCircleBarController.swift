@@ -19,7 +19,7 @@ class SHCircleBarController: UITabBarController {
                 shouldSelectOnTabBar = true
                 return
             }
-            guard let tabBar = tabBar as? SHCircleBar, let index = viewControllers?.index(of: newValue) else {return}
+            guard let tabBar = tabBar as? SHCircleBar, let index = viewControllers?.firstIndex(of: newValue) else {return}
             tabBar.select(itemAt: index, animated: true)
         }
     }
@@ -122,7 +122,7 @@ class SHCircleBarController: UITabBarController {
     }
     
     open override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        guard let idx = tabBar.items?.index(of: item) else { return }
+        guard let idx = tabBar.items?.firstIndex(of: item) else { return }
         if  idx != selectedIndex, let controller = viewControllers?[idx] {
             shouldSelectOnTabBar = false
             selectedIndex = idx
