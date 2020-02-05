@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-ku-login-white" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-QV-l5L">
-                                <rect key="frame" x="-77.666666666666686" y="622" width="530.33333333333337" height="190"/>
+                                <rect key="frame" x="55" y="717" width="265" height="95"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Maastricht Blue"/>
@@ -221,36 +221,6 @@
                                                         <constraint firstAttribute="bottom" secondItem="caz-14-Hj7" secondAttribute="bottom" constant="8" id="lCq-VL-8zo"/>
                                                     </constraints>
                                                 </view>
-                                                <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-sk-HX2">
-                                                    <rect key="frame" x="98" y="76" width="86" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XkT-1s-fyv"/>
-                                                        <constraint firstAttribute="height" constant="30" id="lwG-Z1-bq6"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title=" Delete" image="trash.fill">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="deleteTap:" destination="sbC-Pn-bto" eventType="touchUpInside" id="DA9-4w-PAa"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-4k-jNe">
-                                                    <rect key="frame" x="20" y="76" width="62" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="imM-99-5xO"/>
-                                                        <constraint firstAttribute="height" constant="30" id="u0h-ou-w1w"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" title=" Edit" image="pencil">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="b2F-ps-5ou" kind="show" identifier="editTaskSegue" id="5U9-Vr-OcE"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YC-Yb-fjC">
                                                     <rect key="frame" x="80" y="60" width="275" height="0.0"/>
                                                     <constraints>
@@ -260,19 +230,103 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBP-aL-i7h">
+                                                    <rect key="frame" x="20" y="77" width="60" height="34"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m8s-sD-DHn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jix-5a-C7w">
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="HBo-pn-B8G">
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </view>
+                                                                <vibrancyEffect>
+                                                                    <blurEffect style="regular"/>
+                                                                </vibrancyEffect>
+                                                            </visualEffectView>
+                                                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-4k-jNe">
+                                                                <rect key="frame" x="0.0" y="2" width="60" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="imM-99-5xO"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="u0h-ou-w1w"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title=" Edit" image="pencil">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <segue destination="b2F-ps-5ou" kind="show" identifier="editTaskSegue" id="5U9-Vr-OcE"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="gfG-4k-jNe" firstAttribute="centerX" secondItem="m8s-sD-DHn" secondAttribute="centerX" id="HZp-1c-JJh"/>
+                                                            <constraint firstItem="gfG-4k-jNe" firstAttribute="centerY" secondItem="m8s-sD-DHn" secondAttribute="centerY" id="WpG-Wx-5lE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="CdX-mH-CRT"/>
+                                                        <constraint firstAttribute="height" constant="34" id="MUw-bB-rDg"/>
+                                                    </constraints>
+                                                    <blurEffect style="regular"/>
+                                                </visualEffectView>
+                                                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfD-0y-4Eg">
+                                                    <rect key="frame" x="96" y="77" width="80" height="34"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LFh-0k-HVN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="34"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KxO-Ot-zrg">
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="hjy-J7-5nM">
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </view>
+                                                                <vibrancyEffect>
+                                                                    <blurEffect style="regular"/>
+                                                                </vibrancyEffect>
+                                                            </visualEffectView>
+                                                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSA-sk-HX2">
+                                                                <rect key="frame" x="0.0" y="2" width="80" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="XkT-1s-fyv"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="lwG-Z1-bq6"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title=" Delete" image="trash.fill">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="deleteTap:" destination="sbC-Pn-bto" eventType="touchUpInside" id="DA9-4w-PAa"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="fSA-sk-HX2" firstAttribute="centerY" secondItem="LFh-0k-HVN" secondAttribute="centerY" id="eVV-Uh-pht"/>
+                                                            <constraint firstItem="fSA-sk-HX2" firstAttribute="centerX" secondItem="LFh-0k-HVN" secondAttribute="centerX" id="pmr-2s-1Dh"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="NmZ-dk-01n"/>
+                                                        <constraint firstAttribute="height" constant="34" id="Wd2-Di-UH7"/>
+                                                    </constraints>
+                                                    <blurEffect style="regular"/>
+                                                </visualEffectView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.94509803920000002" green="0.3294117647" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="95Z-uu-7WF" firstAttribute="leading" secondItem="vyz-YW-H3I" secondAttribute="leading" id="5R4-Pf-dbV"/>
                                                 <constraint firstItem="7YC-Yb-fjC" firstAttribute="leading" secondItem="caz-14-Hj7" secondAttribute="leading" id="En5-Jq-bFM"/>
                                                 <constraint firstAttribute="trailing" secondItem="7YC-Yb-fjC" secondAttribute="trailing" constant="20" id="FVp-Ft-fZd"/>
+                                                <constraint firstItem="BfD-0y-4Eg" firstAttribute="centerY" secondItem="gfG-4k-jNe" secondAttribute="centerY" id="MBh-81-gHO"/>
                                                 <constraint firstItem="95Z-uu-7WF" firstAttribute="top" secondItem="vyz-YW-H3I" secondAttribute="top" id="NRd-xy-elt"/>
-                                                <constraint firstItem="fSA-sk-HX2" firstAttribute="leading" secondItem="gfG-4k-jNe" secondAttribute="trailing" constant="16" id="PBn-xY-c3F"/>
-                                                <constraint firstItem="gfG-4k-jNe" firstAttribute="top" secondItem="7YC-Yb-fjC" secondAttribute="bottom" constant="16" id="RUg-p9-vzk"/>
+                                                <constraint firstItem="CBP-aL-i7h" firstAttribute="top" secondItem="7YC-Yb-fjC" secondAttribute="bottom" constant="17" id="She-3d-jxl"/>
                                                 <constraint firstAttribute="trailing" secondItem="95Z-uu-7WF" secondAttribute="trailing" id="foD-EQ-z2L"/>
-                                                <constraint firstItem="gfG-4k-jNe" firstAttribute="leading" secondItem="vyz-YW-H3I" secondAttribute="leading" constant="20" id="gak-qC-zCX"/>
-                                                <constraint firstItem="fSA-sk-HX2" firstAttribute="centerY" secondItem="gfG-4k-jNe" secondAttribute="centerY" id="kB2-u7-LHm"/>
+                                                <constraint firstItem="CBP-aL-i7h" firstAttribute="leading" secondItem="vyz-YW-H3I" secondAttribute="leading" constant="20" id="hOb-Qa-TJ0"/>
                                                 <constraint firstItem="7YC-Yb-fjC" firstAttribute="top" secondItem="95Z-uu-7WF" secondAttribute="bottom" id="tXG-2d-eAD"/>
+                                                <constraint firstItem="BfD-0y-4Eg" firstAttribute="leading" secondItem="gfG-4k-jNe" secondAttribute="trailing" constant="16" id="xuA-Fo-r7S"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -312,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9o-zH-kaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="1203"/>
+            <point key="canvasLocation" x="2084" y="1202.9556650246307"/>
         </scene>
         <!--Add Task-->
         <scene sceneID="ohd-Jd-pEl">
@@ -1015,6 +1069,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5U9-Vr-OcE"/>
+        <segue reference="SUE-bG-M6q"/>
     </inferredMetricsTieBreakers>
 </document>
