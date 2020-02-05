@@ -93,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-ku-login-white" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-QV-l5L">
-                                <rect key="frame" x="-77.666666666666686" y="622" width="530.33333333333337" height="190"/>
+                                <rect key="frame" x="55" y="717" width="265" height="95"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Maastricht Blue"/>
@@ -134,13 +134,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-p7-Oq5">
-                                <rect key="frame" x="102" y="277.66666666666669" width="171" height="34"/>
+                                <rect key="frame" x="102" y="302" width="171" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will see your weekly schedule." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G24-Er-ODt">
-                                <rect key="frame" x="63.000000000000014" y="319" width="249.33333333333337" height="19.333333333333314"/>
+                                <rect key="frame" x="63.000000000000014" y="343.33333333333331" width="249.33333333333337" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -840,7 +840,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="6p4-V3-Gyu" kind="relationship" relationship="viewControllers" id="I60-jJ-hgS"/>
-                        <segue destination="p1o-3J-ag6" kind="relationship" relationship="viewControllers" id="atO-QF-xhr"/>
                         <segue destination="qRr-d6-gbW" kind="relationship" relationship="viewControllers" id="bhD-cN-Gej"/>
                         <segue destination="cVC-Fc-aGR" kind="relationship" relationship="viewControllers" id="xXy-p9-6P3"/>
                     </connections>

@@ -156,7 +156,7 @@ extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.titleCell) as? TitleCell
                 else {return UITableViewCell()}
             cell.titleTextField.tag = section
-            cell.titleTextField.text = editingTask?.title
+            cell.titleTextField.text = newTask.title
             cell.delegate = self
             cell.titleTextField.delegate = self
             return cell
@@ -164,7 +164,7 @@ extension AddTaskViewController: UITableViewDataSource, UITableViewDelegate {
             if index == 0 {
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.datePickerCell) as? DatePickerCell
                     else {return UITableViewCell()}
-                cell.savedDate = editingTask?.date
+                cell.savedDate = newTask.date
                 cell.delegate = self
                 return cell
             } else if index == 1 {
