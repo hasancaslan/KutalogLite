@@ -859,9 +859,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Er9-dV-y9v">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Maastricht Blue"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" name="Maastricht Blue"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="textShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -889,9 +889,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="0f8-lt-RhT">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Maastricht Blue"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" name="Baby Powder"/>
-                        <color key="barTintColor" name="Maastricht Blue"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="Baby Powder"/>
                         </textAttributes>
@@ -998,8 +998,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="g1n-sS-R01">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Maastricht Blue"/>
-                        <color key="barTintColor" name="Maastricht Blue"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="Baby Powder"/>
                         </textAttributes>
@@ -1025,9 +1025,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Bh8-Yw-be4">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Maastricht Blue"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" name="Baby Powder"/>
-                        <color key="barTintColor" name="Maastricht Blue"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="Baby Powder"/>
                         </textAttributes>
