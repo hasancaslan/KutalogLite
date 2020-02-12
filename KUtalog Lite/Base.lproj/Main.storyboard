@@ -96,7 +96,7 @@
                                 <rect key="frame" x="55" y="717" width="265" height="95"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" name="Maastricht Blue"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OSo-eM-Cku" firstAttribute="trailing" secondItem="LcC-YL-JLb" secondAttribute="trailing" constant="40" id="9Jk-TW-eVc"/>
                             <constraint firstItem="LcC-YL-JLb" firstAttribute="leading" secondItem="OSo-eM-Cku" secondAttribute="leading" constant="40" id="Bzx-VO-Xmb"/>
@@ -836,7 +836,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="Maastricht Blue"/>
+                        <color key="selectedImageTintColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="6p4-V3-Gyu" kind="relationship" relationship="viewControllers" id="I60-jJ-hgS"/>
@@ -853,7 +853,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6p4-V3-Gyu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Course History" image="archivebox" selectedImage="archivebox" id="x5Z-hv-irJ">
-                        <color key="badgeColor" name="Maastricht Blue"/>
+                        <color key="badgeColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Er9-dV-y9v">
@@ -884,7 +884,9 @@
         <scene sceneID="bJn-iz-p2g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qRr-d6-gbW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" image="square.and.pencil" selectedImage="square.and.pencil" id="rkh-fu-3pi"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="square.and.pencil" selectedImage="square.and.pencil" id="rkh-fu-3pi">
+                        <color key="badgeColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="0f8-lt-RhT">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -993,7 +995,9 @@
         <scene sceneID="qHh-ZC-vfd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cVC-Fc-aGR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="gear" selectedImage="gear" id="xZ4-xL-hXm"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" selectedImage="gear" id="xZ4-xL-hXm">
+                        <color key="badgeColor" red="0.0039215686269999999" green="0.086274509799999996" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="g1n-sS-R01">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
