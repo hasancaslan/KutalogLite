@@ -60,6 +60,7 @@ class SettingsViewController: UIViewController {
     @IBAction func logOutTapped(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.usernameKey)
         UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.passwordKey)
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKeys.storageKey)
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: ViewControllerIdentifiers.loginView) as? LoginViewController else { return }
         UIApplication.shared.delegate?.window??.rootViewController = controller
     }
