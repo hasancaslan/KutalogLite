@@ -28,6 +28,8 @@
 		F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */; };
 		F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FE123D47B7F001B014B /* URLRequests.swift */; };
 		F3B5504B23E8A30300D44FF6 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */; };
+		F3BDE4BE24F7075E00866797 /* KUtalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE4BD24F7075E00866797 /* KUtalogTests.swift */; };
+		F3BDE4CC24F7076900866797 /* KUtalogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BDE4CB24F7076900866797 /* KUtalogUITests.swift */; };
 		F3C337D723E6E885005A7BA0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */; };
 		F3C337D923E6EBD2005A7BA0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */; };
 		F3C337DB23E6EBE1005A7BA0 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */; };
@@ -50,6 +52,23 @@
 		F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3F53F6323DA2C980093CD15 /* GoogleService-Info.plist */; };
 		F3FCA24D23E87823007FB23D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCA24C23E87823007FB23D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3BDE4C024F7075E00866797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3AE0FBB23D477C5001B014B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3AE0FC223D477C5001B014B;
+			remoteInfo = KUtalog;
+		};
+		F3BDE4CE24F7076900866797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3AE0FBB23D477C5001B014B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3AE0FC223D477C5001B014B;
+			remoteInfo = KUtalog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		26D3F066720AC2CD53D34872 /* Pods-KUtalog Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KUtalog Lite.release.xcconfig"; path = "Target Support Files/Pods-KUtalog Lite/Pods-KUtalog Lite.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +98,12 @@
 		F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataSource.swift; sourceTree = "<group>"; };
 		F3AE0FE123D47B7F001B014B /* URLRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequests.swift; sourceTree = "<group>"; };
 		F3B5504A23E8A30300D44FF6 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		F3BDE4BB24F7075E00866797 /* KUtalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KUtalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BDE4BD24F7075E00866797 /* KUtalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUtalogTests.swift; sourceTree = "<group>"; };
+		F3BDE4BF24F7075E00866797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BDE4C924F7076900866797 /* KUtalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KUtalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3BDE4CB24F7076900866797 /* KUtalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KUtalogUITests.swift; sourceTree = "<group>"; };
+		F3BDE4CD24F7076900866797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3C337D623E6E885005A7BA0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		F3C337D823E6EBD2005A7BA0 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		F3C337DA23E6EBE1005A7BA0 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
@@ -109,6 +134,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				92F9D05EA0E275478EB6A4EB /* Pods_KUtalog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BDE4B824F7075E00866797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BDE4C624F7076900866797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				F3AE0FC523D477C5001B014B /* KUtalog Lite */,
+				F3BDE4BC24F7075E00866797 /* KUtalogTests */,
+				F3BDE4CA24F7076900866797 /* KUtalogUITests */,
 				F3AE0FC423D477C5001B014B /* Products */,
 				96F47B57A66A07D0BD468ECB /* Pods */,
 				DB1DA87D688CCC926C7CDA28 /* Frameworks */,
@@ -174,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				F3AE0FC323D477C5001B014B /* KUtalog.app */,
+				F3BDE4BB24F7075E00866797 /* KUtalogTests.xctest */,
+				F3BDE4C924F7076900866797 /* KUtalogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +288,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F3BDE4BC24F7075E00866797 /* KUtalogTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3BDE4BD24F7075E00866797 /* KUtalogTests.swift */,
+				F3BDE4BF24F7075E00866797 /* Info.plist */,
+			);
+			path = KUtalogTests;
+			sourceTree = "<group>";
+		};
+		F3BDE4CA24F7076900866797 /* KUtalogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3BDE4CB24F7076900866797 /* KUtalogUITests.swift */,
+				F3BDE4CD24F7076900866797 /* Info.plist */,
+			);
+			path = KUtalogUITests;
+			sourceTree = "<group>";
+		};
 		F3C337F023E6FA55005A7BA0 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,18 +349,62 @@
 			productReference = F3AE0FC323D477C5001B014B /* KUtalog.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F3BDE4BA24F7075E00866797 /* KUtalogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BDE4C224F7075E00866797 /* Build configuration list for PBXNativeTarget "KUtalogTests" */;
+			buildPhases = (
+				F3BDE4B724F7075E00866797 /* Sources */,
+				F3BDE4B824F7075E00866797 /* Frameworks */,
+				F3BDE4B924F7075E00866797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3BDE4C124F7075E00866797 /* PBXTargetDependency */,
+			);
+			name = KUtalogTests;
+			productName = KUtalogTests;
+			productReference = F3BDE4BB24F7075E00866797 /* KUtalogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3BDE4C824F7076900866797 /* KUtalogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3BDE4D024F7076900866797 /* Build configuration list for PBXNativeTarget "KUtalogUITests" */;
+			buildPhases = (
+				F3BDE4C524F7076900866797 /* Sources */,
+				F3BDE4C624F7076900866797 /* Frameworks */,
+				F3BDE4C724F7076900866797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3BDE4CF24F7076900866797 /* PBXTargetDependency */,
+			);
+			name = KUtalogUITests;
+			productName = KUtalogUITests;
+			productReference = F3BDE4C924F7076900866797 /* KUtalogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F3AE0FBB23D477C5001B014B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = hasancanaslan;
 				TargetAttributes = {
 					F3AE0FC223D477C5001B014B = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					F3BDE4BA24F7075E00866797 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = F3AE0FC223D477C5001B014B;
+					};
+					F3BDE4C824F7076900866797 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = F3AE0FC223D477C5001B014B;
 					};
 				};
 			};
@@ -317,6 +422,8 @@
 			projectRoot = "";
 			targets = (
 				F3AE0FC223D477C5001B014B /* KUtalog */,
+				F3BDE4BA24F7075E00866797 /* KUtalogTests */,
+				F3BDE4C824F7076900866797 /* KUtalogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +437,20 @@
 				F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */,
 				F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */,
 				F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BDE4B924F7075E00866797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BDE4C724F7076900866797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +543,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F3BDE4B724F7075E00866797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BDE4BE24F7075E00866797 /* KUtalogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BDE4C524F7076900866797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3BDE4CC24F7076900866797 /* KUtalogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3BDE4C124F7075E00866797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3AE0FC223D477C5001B014B /* KUtalog */;
+			targetProxy = F3BDE4C024F7075E00866797 /* PBXContainerItemProxy */;
+		};
+		F3BDE4CF24F7076900866797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3AE0FC223D477C5001B014B /* KUtalog */;
+			targetProxy = F3BDE4CE24F7076900866797 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F3AE0FCC23D477C5001B014B /* Main.storyboard */ = {
@@ -494,7 +644,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +698,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -569,7 +719,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,7 +743,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,6 +753,90 @@
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.hasancanaslan.KUtalog-Lite";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F3BDE4C324F7075E00866797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WXV9WLK4Q4;
+				INFOPLIST_FILE = KUtalogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasancanaslan.KUtalogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KUtalog.app/KUtalog";
+			};
+			name = Debug;
+		};
+		F3BDE4C424F7075E00866797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXV9WLK4Q4;
+				INFOPLIST_FILE = KUtalogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasancanaslan.KUtalogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KUtalog.app/KUtalog";
+			};
+			name = Release;
+		};
+		F3BDE4D124F7076900866797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WXV9WLK4Q4;
+				INFOPLIST_FILE = KUtalogUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasancanaslan.KUtalogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KUtalog;
+			};
+			name = Debug;
+		};
+		F3BDE4D224F7076900866797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WXV9WLK4Q4;
+				INFOPLIST_FILE = KUtalogUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hasancanaslan.KUtalogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KUtalog;
 			};
 			name = Release;
 		};
@@ -623,6 +857,24 @@
 			buildConfigurations = (
 				F3AE0FDB23D477C8001B014B /* Debug */,
 				F3AE0FDC23D477C8001B014B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BDE4C224F7075E00866797 /* Build configuration list for PBXNativeTarget "KUtalogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BDE4C324F7075E00866797 /* Debug */,
+				F3BDE4C424F7075E00866797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3BDE4D024F7076900866797 /* Build configuration list for PBXNativeTarget "KUtalogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BDE4D124F7076900866797 /* Debug */,
+				F3BDE4D224F7076900866797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
