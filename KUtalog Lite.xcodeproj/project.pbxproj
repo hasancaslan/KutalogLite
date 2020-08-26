@@ -20,10 +20,10 @@
 		F3463D6023D5BBEC000457A7 /* CourseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D5F23D5BBEC000457A7 /* CourseHistoryViewController.swift */; };
 		F3463D6223D5C210000457A7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6123D5C210000457A7 /* Reachability.swift */; };
 		F3463D6423D5E27E000457A7 /* TermDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3463D6323D5E27E000457A7 /* TermDetailViewController.swift */; };
+		F347B60423EAEB2F0014A243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD223D477C8001B014B /* Assets.xcassets */; };
 		F3AE0FC723D477C5001B014B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FC623D477C5001B014B /* AppDelegate.swift */; };
 		F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FCC23D477C5001B014B /* Main.storyboard */; };
 		F3AE0FD123D477C5001B014B /* KUtalog_Lite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FCF23D477C5001B014B /* KUtalog_Lite.xcdatamodeld */; };
-		F3AE0FD323D477C8001B014B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD223D477C8001B014B /* Assets.xcassets */; };
 		F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE0FD423D477C8001B014B /* LaunchScreen.storyboard */; };
 		F3AE0FE023D47B5E001B014B /* CourseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FDF23D47B5E001B014B /* CourseDataSource.swift */; };
 		F3AE0FE223D47B7F001B014B /* URLRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE0FE123D47B7F001B014B /* URLRequests.swift */; };
@@ -326,9 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F347B60423EAEB2F0014A243 /* Assets.xcassets in Resources */,
 				F3AE0FD623D477C8001B014B /* LaunchScreen.storyboard in Resources */,
 				F3F53F6423DA2C980093CD15 /* GoogleService-Info.plist in Resources */,
-				F3AE0FD323D477C8001B014B /* Assets.xcassets in Resources */,
 				F3AE0FCE23D477C5001B014B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -586,6 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "KUtalog Lite/KUtalog Lite.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = WXV9WLK4Q4;
 				INFOPLIST_FILE = "KUtalog Lite/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

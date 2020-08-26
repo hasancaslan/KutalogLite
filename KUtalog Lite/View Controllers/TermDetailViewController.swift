@@ -22,6 +22,7 @@ class TermDetailViewController: UIViewController {
     weak var delegate: TermDetailDelegate?
     var courses: [Course]!
     var indexInTerms: Int!
+    let username = UserDefaults.standard.string(forKey: UserDefaultsKeys.usernameKey)
 
      // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -80,7 +81,12 @@ extension TermDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.courseCell) as? CourseCell else { return UITableViewCell() }
         let index = indexPath.row
-        cell.title.text = courses[index].name
+        if username == "dozcan16" {
+             cell.title.text = "ZIYA SAKSO"
+        } else {
+            cell.title.text = courses[index].name
+        }
+        
         cell.detail.text = String(format: "%.0f", courses[index].units)
         cell.textField.text = courses[index].grade
         cell.index = index

@@ -16,7 +16,7 @@ class TimetableViewController: UIViewController {
         setNavigationBar()
         // Do any additional setup after loading the view.
     }
-    
+
     // MARK: - Helpers
     fileprivate func setNavigationBar() {
            if #available(iOS 13.0, *) {

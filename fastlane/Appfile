@@ -1,0 +1,8 @@
+app_identifier("com.hasancanaslan.KUtalog-Lite") # The bundle identifier of your app
+apple_id("aslan4044@gmail.com") # Your Apple email address
+
+itc_team_id("120528274") # App Store Connect Team ID
+team_id("WXV9WLK4Q4") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

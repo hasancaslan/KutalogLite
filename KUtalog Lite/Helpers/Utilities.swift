@@ -129,8 +129,8 @@ class Utilities {
         return terms
     }
 
-    func sortTerms(_ termm: [[Course]]) -> [[Course]] {
-        var sortedTerms = termm
+    func sortTerms(_ term: [[Course]]) -> [[Course]] {
+        var sortedTerms = term
         for i  in 0..<sortedTerms.count - 1 {
 
             for j in 1..<sortedTerms.count - i {
