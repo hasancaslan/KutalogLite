@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3BDE4BA24F7075E00866797"
+               BuildableName = "KUtalogTests.xctest"
+               BlueprintName = "KUtalogTests"
+               ReferencedContainer = "container:KUtalog Lite.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F3BDE4C824F7076900866797"
+               BuildableName = "KUtalogUITests.xctest"
+               BlueprintName = "KUtalogUITests"
+               ReferencedContainer = "container:KUtalog Lite.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
