@@ -1,6 +1,0 @@
-framework module Pods_KUtalog {
-  umbrella header "Pods-KUtalog-umbrella.h"
-
-  export *
-  module * { export * }
-}
